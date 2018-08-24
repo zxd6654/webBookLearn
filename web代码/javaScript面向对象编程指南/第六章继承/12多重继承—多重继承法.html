@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    /**
+     * 所谓的多重继承，通常指的是一个子对象中有不止一个父对象的继承模式
+     * 多重继承实现是极其简单的，我们只需要延续属性拷贝法的继承思路依次扩展对象即
+     可，而对参数中所继承的对象的数量没有限制。
+     * */
+    function multi() {
+        var n = {}, stuff, j = 0, len = arguments.length;
+        for (j = 0; j < len; j++) {
+            stuff = arguments[j];
+            for (var i in stuff) {
+                if (stuff.hasOwnProperty(i)) {
+                    n[i] = stuff[i];
+                }
+            }
+        }
+        return n;
+    }
+
+    var shape = {
+        name: 'shape',
+        toString: function () {
+            return this.name;
+        }
+    };
+
+    var twoDee = {
+        name: '2D shape',
+        dimensions: 2
+    };
+
+    var triangle = multi(shape, twoDee, {
+        name: 'Triangle',
+        getArea: function () {
+            return this.side * this.height / 2;
+        },
+        side: 5,
+        height: 10
+    });
+
+//    getArea()方法应该是独有属性，dimensions
+//    则应该是自 twoDee 而来的继承属性，toString()则是从 shape 继承而来的
+
+    console.log(triangle.getArea());//25
+    console.log(triangle.dimensions);//2
+    console.log(triangle.toString());//"Triangle"
+</script>
+</body>
+</html>

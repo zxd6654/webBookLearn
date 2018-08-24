@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    Function.prototype.method = function (name, func) {
+        if(!this.prototype[name]){
+            this.prototype[name] = func;
+            return this;
+        }
+    };
+    //js没有单独的整数类型
+    Number.method('integer', function () {
+        return Math[this < 0 ? 'ceil' : 'floor'](this);
+    });
+    document.writeln((-10 / 3).integer());
+    //js缺少移除字符串末端的方法
+    String.method('trim', function () {
+        return this.replace(/^\s+|s+$/g, '');
+    });
+    document.writeln('  neat  '.trim());
+</script>
+</body>
+</html>

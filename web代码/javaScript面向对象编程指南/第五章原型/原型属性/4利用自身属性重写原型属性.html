@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+ //如果遇上对象的自身属性与原型属性同名又该怎么办呢？答案是对象自身属性的优先级高于原型属性
+
+ function Gadget(name) {
+     this.name = name;
+ }
+  Gadget.prototype.name = 'mirror';
+
+ var toy = new Gadget('camera');
+ toy.name;//"camera"
+
+    //我们可以通过 hasOwnProperty()方法来判断一个属性是自身属性还是原型属性。
+
+</script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+我们可以在新建的对象中调用相关原型对象的方法和属性。
+而原型对象自身也具有对象固有的普遍特征，因此本身也包含了指向其原型的链接。
+由此就形成了一条链，我们称之为原型链。
+
+继承的作用，它能使每个对象都能访问其继承链上的任何一个属性。
+
+每个构造函数都有一个原型对象(prototype)，原型对象都包含一个指向构造函数的指针(constructor)，而实例都包含一个指向原型对象的内部指针(proto)。
+<script>
+    //原型链是 JavaScript 中实现继承的默认方式
+    function Shape() {
+        this.name = 'Shape';
+        this.toString = function () {
+            return this.name;
+        };
+    }
+
+    function TwoDShape() {
+        this.name = '2D shape';
+    }
+
+    function Triangle(side, height) {
+        this.name = 'Triangle';
+        this.side = side;
+        this.height = height;
+        this.getArea = function () {
+            return this.side * this.height / 2;
+        };
+    }
+
+    TwoDShape.prototype = new Shape();
+    Triangle.prototype = new TwoDShape();
+
+    //    当我们对对象的 prototype 属性进行完全替换时（这不同于
+    //    向prototype 指向的对象添加属性），有可能会对对象constructor 属性产生一定的副作用。
+    //    所以，在我们完成相关的继承关系设定后，对这些对象的 constructor 属性进行相应的重置
+    //    是一个非常好的习惯
+
+    TwoDShape.prototype.constructor = TwoDShape;
+    Triangle.prototype.constructor = Triangle;
+
+    //创建一个实例
+    var my = new Triangle(5, 10);
+    my.getArea();//25
+
+    my.toString();//'Triangle'
+    //尽管my对象中并没有属于自己的toString方法，但是我们依然可以调用他所继承的toString方法。
+    //虽然我们这里调用的是一个继承方法，但是this所指向的依然是my对象。
+
+
+</script>
+</body>
+</html>

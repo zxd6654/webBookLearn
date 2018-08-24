@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var n = new Number('12.12');
+
+    //内置属性
+    Number.MAX_VALUE;
+    //1.7976931348623157e+308
+    Number.MIN_VALUE;
+    //5e-324
+    Number.POSITIVE_INFINITY;
+    //Infinity
+    Number.NEGATIVE_INFINITY;
+    //-Infinity
+    Number.NaN;
+    //NaN
+
+    //内置方法
+    //toFixed()、toPrecision()和 toExponential()
+
+    //该对象的 toString()方法有一个可选的 radix 参数（它的默认值是 10）。
+    var m = new Number(255);
+    m.toString();//'255'
+    m.toString(16);//'ff'
+</script>
+</body>
+</html>

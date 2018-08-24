@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    /**
+     * 原型继承与属性拷贝的混合应用
+     * 1使用原型继承的方式，将一个已有对象设置为新对象的原型
+     * 2新建一个对象后，将另一个已有对象的所有属性拷贝过来
+     * */
+    function objectPlus(o, stuff) {
+        var n;
+
+        function F() {
+
+        }
+
+        F.prototype = o;
+        n = new F();
+        n.uber = o;
+
+        for (var i in stuff) {
+            n[i] = stuff[i];
+        }
+        return n;
+    }
+
+    var shape = {
+        name: 'shape',
+        toString: function () {
+            return this.name;
+        }
+    };
+
+    var twoDee = objectPlus(shape, {
+        name: '2d shape',
+        toString: function () {
+            return this.uber.toString() + ',' + this.name;
+        }
+    });
+    console.log(twoDee);
+
+    //我们来创建一个继承于 2D 对象的 triangle 对象，并为其添加一些额外的属性。
+    var triangle = objectPlus(twoDee, {
+        name: 'Triangle',
+        getArea: function () {
+            return this.side * this.height / 2;
+        },
+        side: 0,
+        height: 0
+    });
+    console.log(triangle);
+
+    var my = objectPlus(triangle, {
+        side: 4,
+        height: 4
+    });
+    console.log(my.getArea());//8
+    console.log(my.toString());//shape,2d shape,Triangle,Triangle
+</script>
+</body>
+</html>

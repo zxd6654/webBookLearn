@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var inner;
+    var f = function () {
+        var b = 'local variable';
+        var n = function () {
+            return b;
+        };
+        inner = n
+    };
+    console.log(f());//undefined
+    console.log(inner());
+
+    //事实上，每个函数都可以被认为是一个闭包。因为每个函数都在其所在域（即该函数的作
+    //用域）中维护了某种私有联系。但在大多数时候，该作用域在函数体执行完之后就自行销毁了
+    //—除非发生一些有趣的事（比如像上一小节所述的那样），导致作用域被保持。
+
+    function F(param) {
+        var N = function () {
+            return param
+        };
+        param++;
+        return N;
+    }
+
+    console.log(F(123)());//124
+
+    //    当我们的返回函数被调用时，param++已经执行过一次递增操作了。所以
+    //    inner()返回的是更新后的值。由此我们可以看出，函数所绑定的是作用域本身，而不是
+    //    在函数定义时该作用域中的变量或变量当前所返回的值。
+</script>
+</body>
+</html>

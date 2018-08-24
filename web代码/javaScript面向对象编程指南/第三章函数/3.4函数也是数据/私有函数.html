@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function outer(param){
+        function inter(input) { //私有函数
+            return input
+        }
+        return 'this result is '+inter(param)
+    }
+
+    console.log(outer(1));
+
+
+    //返回值是不带括号的，仅仅是函数的一个引用，并不会产生函数调用
+    var a = (function () {
+        function someSetup () {
+            var setup = 'done';
+        }
+        function actualWork() {
+            alert('Worky-worky');
+        }
+        someSetup();
+        return actualWork;
+    }() );
+</script>
+</body>
+</html>

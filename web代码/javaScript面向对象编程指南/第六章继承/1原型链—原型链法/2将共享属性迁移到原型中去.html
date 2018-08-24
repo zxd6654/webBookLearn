@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //    function Shape(){
+    //        this.name = 'Shape';
+    //    }
+    //    这种实现意味着我们用 new Shape()创建的每个实体都会拥有一个全新的 name 属
+    //    性，并在内存中拥有自己独立的存储空间。而事实上，我们也可以选择将 name 属性添加
+    //    到原型上去，这样一来所有实体就可以共享这个属性了
+
+    //    function Shape() {}
+    //    Shape.prototype.name = 'Shape';
+
+
+    /**
+     * @constructor
+     * 我们必须在扩展原型对象之前完成继承关系的构建。
+     */
+
+    //constructor
+    function Shape() {
+    }
+
+    //augment prototype
+    Shape.prototype.name = 'Shape';
+    Shape.prototype.toString = function () {
+        return this.name;
+    };
+
+    // another constructor
+    function TwoDShape() {
+    }
+
+    // take care of inheritance
+    TwoDShape.prototype = new Shape();
+    TwoDShape.prototype.constructor = TwoDShape;
+
+    // augment prototype
+    TwoDShape.prototype.name = '2D shape';
+
+    function Triangle(side, height) {
+        this.side = side;
+        this.height = height;
+    }
+
+    // take care of inheritance
+    Triangle.prototype = new TwoDShape();
+    Triangle.prototype.constructor = Triangle;
+
+    // augment prototype
+    Triangle.prototype.name = 'Triangle';
+    Triangle.prototype.getArea = function () {
+        return this.side * this.height / 2;
+    };
+
+    var my = new Triangle(5, 10);
+    my.getArea();
+
+    //实际上调用 my.toString()的区别仅仅存在于幕后的某些少量操作。
+    //主要区别也就是方法的查找操作将更多地发生在 Shape.prototype 中，而不再需要像前面
+    //示例中那样，到由 new Shape()所创建的实体对象中查找了。
+</script>
+</body>
+</html>

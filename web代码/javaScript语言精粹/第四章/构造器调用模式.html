@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //创建一个构造函数
+    var Quo = function (string) {
+        this.status = string;
+    };
+    //给所有实例提供一个get_status的公共方法。
+    Quo.prototype.get_status = function () {
+        return this.status;
+    };
+    //构造一个实例
+    var myQuo=new Quo('confused');
+    document.writeln(myQuo.get_status())//confused
+</script>
+</body>
+</html>

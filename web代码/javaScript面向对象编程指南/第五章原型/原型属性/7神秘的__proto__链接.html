@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var monkey = {
+        feeds: 'bananas',
+        breathes: 'air'
+    };
+
+    function Human() {}
+    Human.prototype = monkey;
+
+    var developer = new Human();
+    developer.feeds = 'pizza';
+    developer.hacks = 'JavaScript';
+
+    //breathes 在 developer 对象自身的属性中是不存在的，所以就得去原型中查询，
+    //就好像其中有一个神秘的链接，或者秘密通道指向了相关的原型对象。
+
+    //在现代 JavaScript 环境中，对象中确实存在一个指向相关原型的链接，这个神秘的链
+    //接被叫做__proto__属性（proto 这个词的两边各有两条下划线）。
+
+    console.log(developer.__proto__===monkey);//true
+
+    //另外需要提示的是，__proto__与 prototype 并不是等价的。
+    // __proto__实际上是某个实例对象的属性，而 prototype 则是属于构造器函数的属性
+    //千万要记住，__proto__只能在学习或调试的环境下使用
+</script>
+
+</body>
+</html>

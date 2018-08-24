@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function F() {
+        var arr = [], i;
+        for (i = 0; i < 3; i++) {
+            arr[i] = (function (j) {
+              return function(){
+                  return j
+              }
+            })(i);
+        }
+        return arr;
+    }
+
+    var arr = F();
+    console.log(arr[0](), arr[1](), arr[2]());
+</script>
+</body>
+</html>

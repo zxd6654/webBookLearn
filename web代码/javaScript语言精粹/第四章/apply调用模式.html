@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var add = function (a, b) {
+        return a + b;
+    };
+    //构造一个包含两个数字的数组，相加
+    var array = [3, 4];
+    var sum = add.apply(null, array);
+    console.log(sum);//7
+
+    var Quo = function (string) {
+        this.status = string;
+    };
+    //给所有实例提供一个get_status的公共方法。
+    Quo.prototype.get_status = function () {
+        return this.status
+    };
+
+    //构造一个包含status成员的对象
+    var statusObject = {
+        status: 'A-OK'
+    };
+
+    var status = Quo.prototype.get_status.apply(statusObject);
+//    var status = Quo.prototype.get_status.call(statusObject);
+    console.log(status);
+
+</script>
+</body>
+</html>

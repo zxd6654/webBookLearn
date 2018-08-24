@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function Gadget(name, color) {
+        this.name = name;
+        this.color = color;
+        this.whatAreYou = function () {
+            return 'I am a ' + this.color + ' ' + this.name;
+        };
+    }
+
+    Gadget.prototype.price = 100;
+    Gadget.prototype.rating = 3;
+    Gadget.prototype.getInfo = function () {
+        return 'Rating: ' + this.rating +
+            ', price: ' + this.price;
+    };
+
+    var newtoy=new Gadget('webcam','black');
+    console.log(newtoy);
+    //当我们访问 newtoy 的某个属性，例如 newtoy.name 时，JavaScript 引擎会遍历该对
+    //象的所有属性，并查找出 name 属性。如果找到了就会立即返回其值。
+
+
+//    如果我们访问 rating 属性又会发生什么呢？JavaScript 引擎依然会查询
+//    newtoy 对象的所有属性，但这一回它找不到一个叫 rating 的属性了。接下来，脚本引擎
+//    就会去查询用于创建当前对象的构造器函数的原型（等价于我们直接访问 newtoy.
+//        constructor.prototype）。如果在原型中找到了该属性，就立即使用该属性。
+
+    // newtoy.constructor === Gadget    true
+
+</script>
+</body>
+</html>

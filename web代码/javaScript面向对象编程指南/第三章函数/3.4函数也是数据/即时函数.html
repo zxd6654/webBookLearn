@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //立即调用,无法重复执行。
+    (function(){
+        alert(1)
+    })();
+
+    (function(){
+        alert(2)
+    }());
+
+    var result=(function(){
+        return alert(3)
+    })();
+</script>
+</body>
+</html>

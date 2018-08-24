@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //对象字面量形式去初始化myObject
+    //    var myObject = {
+    //        value: 0,
+    //        increment: function (inc) {
+    //            this.value += typeof inc === 'number' ? inc : 1;
+    //        }
+    //    };
+
+    //通过调用一个函数的形式去初始化myObject
+    var myObject = function () {
+        var value = 0;
+        return {
+            increment: function (inc) {
+                value += typeof inc === 'number' ? inc : 1;
+            },
+            getValue: function () {
+                return value
+            }
+        };
+    }();
+
+    var quo = function (status) {
+        return {
+            get_status: function () {
+                return status;
+            }
+        }
+    };
+
+    var myQuo=quo('amazed');
+    console.log(myQuo);
+    document.writeln(myQuo.get_status())
+</script>
+</body>
+</html>

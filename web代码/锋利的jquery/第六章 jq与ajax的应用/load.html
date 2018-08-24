@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script src="../js/jquery.min.js"></script>
+<input type="button" id="send" value="Ajax获取">
+<div class="comment">已有评论：</div>
+<div id="resetText"></div>
+<!--在jq中$.ajax方法水域最底层的方法，第二层是load $.get() $.post()  ，第三层是$.getScript() $.getJSON()-->
+
+<!--load 结构  load（url [, data] [, callback]）-->
+<!--$('#resetText').load('demo1.html .para',{name:'rain',age:'22'},function(responseText,textStatus,XMLHttpRequest){});//有选择的加载过来-->
+
+<!--load 通常用来从web服务器上获取静态数据文件-->
+例如
+<script>
+    $(function () {
+        $('#send').click(function () {
+//            $('#resetText').load('demo1.html');//全部加载过来
+            $('#resetText').load('demo1.html .para');//有选择的加载过来
+
+
+        })
+    })
+</script>
+</body>
+</html>

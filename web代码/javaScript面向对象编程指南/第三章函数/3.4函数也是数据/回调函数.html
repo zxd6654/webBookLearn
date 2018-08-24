@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //当我们将函数a传递给函数b，并由b来执行a时，a就成了一个回调函数
+    function multiplyByTwo(a, b, c, callback) {
+        var i, ar = [];
+        for (i = 0; i < 3; i++) {
+            ar[i] = callback(arguments[i] * 2);
+        }
+        return ar
+    }
+
+    function addOne(a) {
+        return a + 1;
+    }
+
+    console.log(multiplyByTwo(1, 2, 3, addOne));
+</script>
+</body>
+</html>

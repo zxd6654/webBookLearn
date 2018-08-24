@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var add = function (a, b) {
+        if (typeof a !== 'number' || typeof b !== 'number') {
+            throw {
+                name: 'typeError',
+                message: 'add needs Number'
+            }
+        }
+        return a + b;
+    };
+    try {
+        add('one', 'two');
+    } catch (e) {
+//        console.log(e);
+        document.writeln(e.name + ':' + e.message)
+    }
+</script>
+</body>
+</html>

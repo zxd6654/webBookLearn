@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //通过 instanceof 操作符，我们可以测试一个对象是不是由某个指定的构造器函数所创建的
+
+    function Hero(){}
+    var h = new Hero();
+    var o = {};
+    h instanceof Hero;
+    //true
+     h instanceof Object;
+    //true
+    o instanceof Object;
+    //true
+
+</script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    /**
+     * 可以用 object()函数来接收父对象，并返回一个以该对象为原型的新对象。
+     * **/
+    function object(o) {
+        var n;
+
+        function F() {
+        }
+
+        F.prototype = o;
+        n = new F();
+        n.uber = o;
+        return n;
+    }
+
+//    这种模式也被称为原型继承，因为在这里，我们将父对象设置成了子对象的原型。这
+//    个 object()函数被 ES5 所采纳，并且更名为 Object.create()。例如：
+//    var square = Object.create(triangle);
+</script>
+</body>
+</html>

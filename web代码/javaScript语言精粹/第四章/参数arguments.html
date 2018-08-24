@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //构造一个很多数，相加的函数；
+    var sum=function(){
+        var i,sum=0;
+        for (i=0;i<arguments.length;i++){
+            sum+=arguments[i];
+        }
+        return sum;
+    };
+    document.writeln(sum(1,2,3,4,5,6,7,8,9,0))
+</script>
+</body>
+</html>

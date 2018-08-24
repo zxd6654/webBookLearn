@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+在传统的面向对象语言中，通常都会提供一种用于子类访问父类（有时也叫超类）的
+特殊语法，因为我们在实现子类方法往往需要其父类方法的额外辅助。在这种情况下，子
+类通常就要去调用父类中的同名方法，以便最终完成工作。
+<script>
+    /**
+     * JavaScript 中虽然没有这种特殊语法，但是要实现类似的功能还是很寻常的。接下来，
+     让我们再对之前的示例做一些修改，在构建继承关系的过程中引入一个 uber 属性，并令
+     其指向其父级原型对象：
+     * */
+    function Shape(){}
+    // augment prototype
+    Shape.prototype.name = 'shape';
+    Shape.prototype.toString = function(){
+        return this.constructor.uber
+            ? this.constructor.uber.toString() + ', ' + this.name
+            : this.name;
+    };
+</script>
+</body>
+</html>

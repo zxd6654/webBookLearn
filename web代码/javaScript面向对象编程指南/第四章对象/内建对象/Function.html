@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //了函数是一种特殊的数据类型,它实际上是一种对象
+
+    //三种定义函数的方式
+    //function declaration(函数声明)
+    function sum1(a,b) {
+        return a+b;
+    }
+    //function expression (函数表达式)
+    var sum2=function(a,b){
+        return a+b;
+    };
+    //内建构造器
+    var sum3=new Function('a','b',' return a+b;');
+</script>
+
+//与其他对象相同的是，函数对象中也含有名为 constructor 的属性
+//函数对象中也有一个 length 属性，用于记录该函数声明时所决定的参数数量
+
+<script>
+   //prototype 属性是 JavaScript 中使用得最为广泛的函数属性
+    // 每个函数的 prototype 属性中都指向了一个对象
+    //它只有在该函数是构造器时才会发挥作用(其他定义函数的方式也有，)
+    //该函数创建的所有对象都会持有一个该 prototype 属性的引用，并可以将其当做自身的属性来使用
+
+   var ninja = {
+       name: 'Ninja',
+       say: function(){
+           return 'I am a ' + this.name;
+       }
+   };
+   function F(){}
+   F.prototype=ninja;
+   var newFunc=new F();
+   console.log(newFunc.name);
+   console.log(newFunc.say());
+</script>
+
+<script>
+    //函数对象的方法
+    //call() apply()
+    //重新认识 arguments 对象
+    // 推断对象类型 Object.prototype.toString.call({});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var add = function (a, b) {
+        return a + b;
+    };
+
+    var myObject = {
+        value: 1,
+        increment: function (inc) {
+            this.value += typeof inc === 'number' ? inc : 1;
+        }
+    };
+    myObject.double = function () {
+        var helper = function () {
+            //此时this在函数中调用，被指向了全局window，
+            this.value = add(this.value, this.value);
+        };
+
+        helper();
+    };
+    //可以使用变量赋值为this
+
+//    myObject.double1 = function () {
+//        var that=this;
+//        var helper = function () {
+//            that.value = add(that.value, that.value);
+//        };
+//
+//        helper();
+//    };
+    myObject.double();
+    document.writeln(myObject.value);//0
+</script>
+</body>
+</html>
