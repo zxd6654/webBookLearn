@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script src="../js/jquery.min.js"></script>
+<table border="1" style="width: 100px;height: 100px;">
+    <tr>
+        <td><input type="checkbox" disabled></td>
+    </tr>
+    <tr>
+        <td><input type="checkbox"></td>
+    </tr>
+    <tr>
+        <td><input type="checkbox" disabled></td>
+    </tr>
+</table>
+<script>
+    //这段代码有问题
+    $('table>tr:has(td:has(:checkbox:enabled))').css('background', 'red');
+
+</script>
+</body>
+</html>
