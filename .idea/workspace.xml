@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c7d9eca9-189b-45ae-895b-0271f3181617" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web代码/javaScript权威指南/第九章 类和模块/9.1类和原型/9.1类和原型.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web代码/javaScript设计模式与开发实际/第十章组合模式/10.1回顾宏命令.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -13,12 +13,12 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="9.1类和原型.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/web代码/javaScript权威指南/第九章 类和模块/9.1类和原型/9.1类和原型.html">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+      <file leaf-file-name="10.1回顾宏命令.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/web代码/javaScript设计模式与开发实际/第十章组合模式/10.1回顾宏命令.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="900">
-              <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+            <state relative-caret-position="108">
+              <caret line="15" column="23" lean-forward="false" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
               <folding />
             </state>
           </provider>
@@ -47,6 +47,7 @@
         <option value="$PROJECT_DIR$/web代码/ES6标准入门/第九章 对象的扩展/Object.assign/基本用法.html" />
         <option value="$PROJECT_DIR$/web代码/ES6标准入门/第九章 对象的扩展/Object.values/用法.html" />
         <option value="$PROJECT_DIR$/web代码/javaScript权威指南/第九章 类和模块/9.1类和原型/9.1类和原型.html" />
+        <option value="$PROJECT_DIR$/web代码/javaScript设计模式与开发实际/第十章组合模式/10.1回顾宏命令.html" />
       </list>
     </option>
   </component>
@@ -86,7 +87,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -103,28 +104,20 @@
               <item name="webLearn" type="b2602c69:ProjectViewProjectNode" />
               <item name="webLearn" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="web代码" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="javaScript权威指南" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="javaScript设计模式与开发实际" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="webLearn" type="b2602c69:ProjectViewProjectNode" />
               <item name="webLearn" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="web代码" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="javaScript权威指南" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="第九章 类和模块" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="webLearn" type="b2602c69:ProjectViewProjectNode" />
-              <item name="webLearn" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="web代码" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="javaScript权威指南" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="第九章 类和模块" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="9.1类和原型" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="javaScript设计模式与开发实际" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="第十章组合模式" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -175,12 +168,13 @@
       <workItem from="1536047232892" duration="389000" />
       <workItem from="1536112278179" duration="305000" />
       <workItem from="1536141857333" duration="137000" />
-      <workItem from="1536197163626" duration="1474000" />
+      <workItem from="1536197163626" duration="1815000" />
+      <workItem from="1536544289596" duration="2005000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23506000" />
+    <option name="totallyTimeSpent" value="25852000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -195,7 +189,7 @@
     <frame x="1911" y="-9" width="2516" height="1458" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2866503" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2899263" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32996893" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -260,6 +254,14 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/web代码/javaScript权威指南/第九章 类和模块/9.1类和原型/9.1类和原型.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/web代码/ES6标准入门/第九章 对象的扩展/Object.assign/基本用法.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="72">
@@ -511,8 +513,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web代码/javaScript权威指南/第九章 类和模块/9.1类和原型/9.1类和原型.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="900">
-          <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+        <state relative-caret-position="612">
+          <caret line="17" column="24" lean-forward="false" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web代码/javaScript设计模式与开发实际/第十章组合模式/10.1回顾宏命令.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="15" column="23" lean-forward="false" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
           <folding />
         </state>
       </provider>
