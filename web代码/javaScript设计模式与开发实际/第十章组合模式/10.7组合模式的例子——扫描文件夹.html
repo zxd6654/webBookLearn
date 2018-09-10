@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+//定义好文件夹folder和文件file两个类
+<script>
+    /**Folder*/
+    var Folder = function (name) {
+        this.name = name;
+        this.files = [];
+    };
+
+    Folder.prototype.add = function (file) {
+        this.files.push(file)
+    };
+
+    Folder.prototype.scan = function () {
+        console.log('开始扫描文件夹' + this.name);
+        for (var i = 0, file, files = this.files; file = files[i++];) {
+            file.scan();
+        }
+    };
+
+    /**file*/
+    var File = function (name) {
+        this.name = name;
+    };
+
+    File.prototype.add = function () {
+        throw new Error('文件下面不能再添加文件');
+    };
+
+    File.prototype.scan = function () {
+        console.log('开始扫描文件' + this.name);
+    };
+
+    /**F盘里面的文件目录*/
+    var folder = new Folder('学习资料');
+    var folder1 = new Folder('js');
+    var folder2 = new Folder('jq');
+
+    var file1 = new File('js设计模式与开发');
+    var file2 = new File('精通jq');
+    var file3 = new File('重构与模式');
+
+    folder1.add(file1);
+    folder2.add(file2);
+
+    folder.add(folder1);
+    folder.add(folder2);
+    folder.add(file3);
+
+    /**将一下的文件移动到F盘中*/
+    var folder3 = new Folder('Node.js');
+    var file4 = new File('深入浅出Node.js');
+    folder3.add(file4);
+
+    var file5 = new File('js语言尽瘁与编程实践');
+
+    /**添加到原树中*/
+    folder.add(folder3);
+    folder.add(file5);
+
+    /**进行扫描*/
+    folder.scan();
+</script>
+</body>
+</html>
