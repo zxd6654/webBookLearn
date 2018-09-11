@@ -14,16 +14,24 @@
     };
     //抽空方法，因该有子类重写
     Beverage.prototype.brew = function () {
+        throw new Error('子类必须重写brew方法')
     };
     Beverage.prototype.pourInCup = function () {
+        throw new Error('子类必须重写pourInCup方法')
     };
     Beverage.prototype.addCondiments = function () {
+        throw new Error('子类必须重写addCondiments方法')
+    };
+    Beverage.prototype.customerWantsCondiments = function () {
+        return true; //默认需要的调料
     };
     Beverage.prototype.init = function () {
         this.boilWater();
         this.brew();
         this.pourInCup();
-        this.addCondiments();
+        if (this.customerWantsCondiments()) {//如果挂钩返回true，则需要调料
+            this.addCondiments();
+        }
     };
 
     //创建咖啡子类
@@ -40,26 +48,12 @@
     Coffee.prototype.addCondiments = function () {
         console.log('加糖和牛奶');
     };
+    Coffee.prototype.customerWantsCondiments=function(){
+      return window.confirm('请问需要调料吗？');
+    };
     var coffee = new Coffee();
     coffee.init();
 
-    //创建茶子类
-    var Tea = function () {
-    };
-    Tea.prototype = new Beverage();
-
-    Tea.prototype.brew = function () {
-        console.log('用沸水浸泡茶叶');
-    };
-    Tea.prototype.pourInCup = function () {
-        console.log('把茶水倒进杯子');
-    };
-    Tea.prototype.addCondiments = function () {
-        console.log('加柠檬');
-    };
-
-    var tea = new Tea();
-    tea.init();
 </script>
 </body>
 </html>
