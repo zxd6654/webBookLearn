@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c7d9eca9-189b-45ae-895b-0271f3181617" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web代码/javaScript设计模式与开发实际/第十一章模板方法模式/11.5钩子方法.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web代码/javaScript设计模式与开发实际/第三章闭包和高阶函数/高阶函数/3.2.1函数作为参数传递/1回调函数.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web代码/javaScript设计模式与开发实际/第十一章模板方法模式/11.2.3抽离父类.html" afterPath="$PROJECT_DIR$/web代码/javaScript设计模式与开发实际/第十一章模板方法模式/11.2.3抽离父类.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -18,8 +17,8 @@
       <file leaf-file-name="11.2.3抽离父类.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web代码/javaScript设计模式与开发实际/第十一章模板方法模式/11.2.3抽离父类.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="512">
-              <caret line="23" column="20" lean-forward="true" selection-start-line="23" selection-start-column="20" selection-end-line="23" selection-end-column="20" />
+            <state relative-caret-position="828">
+              <caret line="23" column="20" lean-forward="false" selection-start-line="23" selection-start-column="20" selection-end-line="23" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -28,8 +27,18 @@
       <file leaf-file-name="11.5钩子方法.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web代码/javaScript设计模式与开发实际/第十一章模板方法模式/11.5钩子方法.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="728">
-              <caret line="45" column="19" lean-forward="true" selection-start-line="45" selection-start-column="19" selection-end-line="45" selection-end-column="19" />
+            <state relative-caret-position="368">
+              <caret line="35" column="0" lean-forward="false" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="1回调函数.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web代码/javaScript设计模式与开发实际/第三章闭包和高阶函数/高阶函数/3.2.1函数作为参数传递/1回调函数.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="288">
+              <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -67,6 +76,7 @@
         <option value="$PROJECT_DIR$/web代码/javaScript设计模式与开发实际/第十一章模板方法模式/11.2泡一杯咖啡和泡一壶茶.html" />
         <option value="$PROJECT_DIR$/web代码/javaScript设计模式与开发实际/第十一章模板方法模式/11.2.3抽离父类.html" />
         <option value="$PROJECT_DIR$/web代码/javaScript设计模式与开发实际/第十一章模板方法模式/11.5钩子方法.html" />
+        <option value="$PROJECT_DIR$/web代码/javaScript设计模式与开发实际/第三章闭包和高阶函数/高阶函数/3.2.1函数作为参数传递/1回调函数.html" />
       </list>
     </option>
   </component>
@@ -84,7 +94,7 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="1911" />
     <option name="y" value="-9" />
     <option name="width" value="2498" />
@@ -106,7 +116,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -130,12 +139,30 @@
               <item name="webLearn" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="web代码" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="javaScript设计模式与开发实际" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="第十一章模板方法模式" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="第三章闭包和高阶函数" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="webLearn" type="b2602c69:ProjectViewProjectNode" />
+              <item name="webLearn" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="web代码" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="javaScript设计模式与开发实际" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="第三章闭包和高阶函数" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="高阶函数" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="webLearn" type="b2602c69:ProjectViewProjectNode" />
+              <item name="webLearn" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="web代码" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="javaScript设计模式与开发实际" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="第三章闭包和高阶函数" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="高阶函数" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="3.2.1函数作为参数传递" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="Scratches" />
     </panes>
   </component>
@@ -189,12 +216,13 @@
       <workItem from="1536141857333" duration="137000" />
       <workItem from="1536197163626" duration="1815000" />
       <workItem from="1536544289596" duration="10956000" />
-      <workItem from="1536652609199" duration="5792000" />
+      <workItem from="1536652609199" duration="6189000" />
+      <workItem from="1536715809869" duration="1304000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40595000" />
+    <option name="totallyTimeSpent" value="42296000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -206,17 +234,16 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1911" y="-9" width="2516" height="1458" extended-state="6" />
-    <editor active="true" />
+    <frame x="1911" y="-9" width="2516" height="1458" extended-state="7" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21744472" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21990173" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32996893" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32919255" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32919255" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32919255" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -274,11 +301,18 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/web代码/javaScript设计模式与开发实际/第十一章模板方法模式/11.5钩子方法.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1260">
+          <caret line="35" column="0" lean-forward="true" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/web代码/javaScript设计模式与开发实际/第十章组合模式/10.1回顾宏命令.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1476">
           <caret line="41" column="36" lean-forward="true" selection-start-line="38" selection-start-column="3" selection-end-line="41" selection-end-column="36" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -286,7 +320,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1692">
           <caret line="47" column="29" lean-forward="true" selection-start-line="47" selection-start-column="29" selection-end-line="47" selection-end-column="29" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -294,7 +327,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1800">
           <caret line="50" column="0" lean-forward="true" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -302,7 +334,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2340">
           <caret line="65" column="0" lean-forward="true" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -573,7 +604,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="736">
           <caret line="47" column="29" lean-forward="false" selection-start-line="47" selection-start-column="29" selection-end-line="47" selection-end-column="29" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -581,7 +611,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="412">
           <caret line="41" column="36" lean-forward="false" selection-start-line="38" selection-start-column="3" selection-end-line="41" selection-end-column="36" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -589,7 +618,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="368">
           <caret line="65" column="0" lean-forward="false" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -597,7 +625,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1800">
           <caret line="50" column="0" lean-forward="false" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -605,22 +632,29 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="692">
           <caret line="56" column="6" lean-forward="true" selection-start-line="45" selection-start-column="3" selection-end-line="56" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web代码/javaScript设计模式与开发实际/第十一章模板方法模式/11.2.3抽离父类.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="512">
-          <caret line="23" column="20" lean-forward="true" selection-start-line="23" selection-start-column="20" selection-end-line="23" selection-end-column="20" />
+        <state relative-caret-position="828">
+          <caret line="23" column="20" lean-forward="false" selection-start-line="23" selection-start-column="20" selection-end-line="23" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web代码/javaScript设计模式与开发实际/第三章闭包和高阶函数/高阶函数/3.2.1函数作为参数传递/1回调函数.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web代码/javaScript设计模式与开发实际/第十一章模板方法模式/11.5钩子方法.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="728">
-          <caret line="45" column="19" lean-forward="true" selection-start-line="45" selection-start-column="19" selection-end-line="45" selection-end-column="19" />
+        <state relative-caret-position="368">
+          <caret line="35" column="0" lean-forward="false" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
           <folding />
         </state>
       </provider>
