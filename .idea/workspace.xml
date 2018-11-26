@@ -2,7 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c7d9eca9-189b-45ae-895b-0271f3181617" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web代码/javaScript设计模式与开发实际/第三章闭包和高阶函数/高阶函数/3.2.1函数作为参数传递/1回调函数.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web代码/javaScript设计模式与开发实际/13第十三章职责连模式/13.2 实际开发中的职责链模式.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web代码/javaScript设计模式与开发实际/13第十三章职责连模式/13.3 用职责链模式重构代码.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web代码/javaScript设计模式与开发实际/13第十三章职责连模式/13.4 灵活可拆分的职责链节点.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web代码/javaScript设计模式与开发实际/13第十三章职责连模式/13.5 异步的职责链.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web代码/javaScript设计模式与开发实际/第三章闭包和高阶函数/闭包/变量的作用域.html" afterPath="$PROJECT_DIR$/web代码/javaScript设计模式与开发实际/3第三章闭包和高阶函数/闭包/变量的作用域.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web代码/javaScript设计模式与开发实际/第三章闭包和高阶函数/闭包/变量的生存周期.html" afterPath="$PROJECT_DIR$/web代码/javaScript设计模式与开发实际/3第三章闭包和高阶函数/闭包/变量的生存周期.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web代码/javaScript设计模式与开发实际/第三章闭包和高阶函数/高阶函数/3.2.1函数作为参数传递/1回调函数.html" afterPath="$PROJECT_DIR$/web代码/javaScript设计模式与开发实际/3第三章闭包和高阶函数/高阶函数/3.2.1函数作为参数传递/1回调函数.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web代码/javaScript设计模式与开发实际/第八章发布-订阅模式/DOM事件.html" afterPath="$PROJECT_DIR$/web代码/javaScript设计模式与开发实际/8第八章发布-订阅模式/DOM事件.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web代码/javaScript设计模式与开发实际/第十一章模板方法模式/11.2.3抽离父类.html" afterPath="$PROJECT_DIR$/web代码/javaScript设计模式与开发实际/11第十一章模板方法模式/11.2.3抽离父类.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web代码/javaScript设计模式与开发实际/第十一章模板方法模式/11.2泡一杯咖啡和泡一壶茶.html" afterPath="$PROJECT_DIR$/web代码/javaScript设计模式与开发实际/11第十一章模板方法模式/11.2泡一杯咖啡和泡一壶茶.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web代码/javaScript设计模式与开发实际/第十一章模板方法模式/11.5钩子方法.html" afterPath="$PROJECT_DIR$/web代码/javaScript设计模式与开发实际/11第十一章模板方法模式/11.5钩子方法.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web代码/javaScript设计模式与开发实际/第十章组合模式/10.1回顾宏命令.html" afterPath="$PROJECT_DIR$/web代码/javaScript设计模式与开发实际/10第十章组合模式/10.1回顾宏命令.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web代码/javaScript设计模式与开发实际/第十章组合模式/10.4更强大的宏命令.html" afterPath="$PROJECT_DIR$/web代码/javaScript设计模式与开发实际/10第十章组合模式/10.4更强大的宏命令.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web代码/javaScript设计模式与开发实际/第十章组合模式/10.7组合模式的例子——扫描文件夹.html" afterPath="$PROJECT_DIR$/web代码/javaScript设计模式与开发实际/10第十章组合模式/10.7组合模式的例子——扫描文件夹.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web代码/javaScript设计模式与开发实际/第十章组合模式/10.9引用父对象.html" afterPath="$PROJECT_DIR$/web代码/javaScript设计模式与开发实际/10第十章组合模式/10.9引用父对象.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web代码/javaScript设计模式与开发实际/第四章单例模式/惰性单例/通用的惰性单例.html" afterPath="$PROJECT_DIR$/web代码/javaScript设计模式与开发实际/4第四章单例模式/惰性单例/通用的惰性单例.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -13,32 +28,42 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="11.2.3抽离父类.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web代码/javaScript设计模式与开发实际/第十一章模板方法模式/11.2.3抽离父类.html">
+    <leaf>
+      <file leaf-file-name="13.2 实际开发中的职责链模式.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web代码/javaScript设计模式与开发实际/13第十三章职责连模式/13.2 实际开发中的职责链模式.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="828">
-              <caret line="23" column="20" lean-forward="false" selection-start-line="23" selection-start-column="20" selection-end-line="23" selection-end-column="20" />
+            <state relative-caret-position="620">
+              <caret line="49" column="35" lean-forward="true" selection-start-line="49" selection-start-column="35" selection-end-line="49" selection-end-column="35" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="11.5钩子方法.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/web代码/javaScript设计模式与开发实际/第十一章模板方法模式/11.5钩子方法.html">
+      <file leaf-file-name="13.3 用职责链模式重构代码.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web代码/javaScript设计模式与开发实际/13第十三章职责连模式/13.3 用职责链模式重构代码.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="368">
-              <caret line="35" column="0" lean-forward="false" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+            <state relative-caret-position="1484">
+              <caret line="50" column="9" lean-forward="true" selection-start-line="50" selection-start-column="9" selection-end-line="50" selection-end-column="9" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="1回调函数.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web代码/javaScript设计模式与开发实际/第三章闭包和高阶函数/高阶函数/3.2.1函数作为参数传递/1回调函数.html">
+      <file leaf-file-name="13.4 灵活可拆分的职责链节点.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web代码/javaScript设计模式与开发实际/13第十三章职责连模式/13.4 灵活可拆分的职责链节点.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+            <state relative-caret-position="1368">
+              <caret line="62" column="34" lean-forward="false" selection-start-line="62" selection-start-column="34" selection-end-line="62" selection-end-column="34" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="13.5 异步的职责链.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/web代码/javaScript设计模式与开发实际/13第十三章职责连模式/13.5 异步的职责链.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="252">
+              <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -52,6 +77,14 @@
         <option value="HTML File" />
       </list>
     </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>Object.prototype.toString</find>
+    </findStrings>
+    <dirStrings>
+      <dir>C:\Users\yuanzhu\Desktop\webLearn\webLearn</dir>
+    </dirStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -73,10 +106,14 @@
         <option value="$PROJECT_DIR$/web代码/javaScript设计模式与开发实际/第十章组合模式/10.9引用父对象.html" />
         <option value="$PROJECT_DIR$/web代码/javaScript设计模式与开发实际/第十一章模板方法模式/11.2.1先泡一杯咖啡的例子.html" />
         <option value="$PROJECT_DIR$/web代码/javaScript设计模式与开发实际/第十一章模板方法模式/11.2先泡一杯咖啡的例子.html" />
-        <option value="$PROJECT_DIR$/web代码/javaScript设计模式与开发实际/第十一章模板方法模式/11.2泡一杯咖啡和泡一壶茶.html" />
         <option value="$PROJECT_DIR$/web代码/javaScript设计模式与开发实际/第十一章模板方法模式/11.2.3抽离父类.html" />
         <option value="$PROJECT_DIR$/web代码/javaScript设计模式与开发实际/第十一章模板方法模式/11.5钩子方法.html" />
         <option value="$PROJECT_DIR$/web代码/javaScript设计模式与开发实际/第三章闭包和高阶函数/高阶函数/3.2.1函数作为参数传递/1回调函数.html" />
+        <option value="$PROJECT_DIR$/web代码/javaScript设计模式与开发实际/第十一章模板方法模式/11.2泡一杯咖啡和泡一壶茶.html" />
+        <option value="$PROJECT_DIR$/web代码/javaScript设计模式与开发实际/13第十三章职责连模式/13.2 实际开发中的职责链模式.html" />
+        <option value="$PROJECT_DIR$/web代码/javaScript设计模式与开发实际/13第十三章职责连模式/13.3 用职责链模式重构代码.html" />
+        <option value="$PROJECT_DIR$/web代码/javaScript设计模式与开发实际/13第十三章职责连模式/13.4 灵活可拆分的职责链节点.html" />
+        <option value="$PROJECT_DIR$/web代码/javaScript设计模式与开发实际/13第十三章职责连模式/13.5 异步的职责链.html" />
       </list>
     </option>
   </component>
@@ -94,11 +131,11 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="1911" />
     <option name="y" value="-9" />
-    <option name="width" value="2498" />
-    <option name="height" value="720" />
+    <option name="width" value="2516" />
+    <option name="height" value="1458" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -116,6 +153,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -139,31 +178,12 @@
               <item name="webLearn" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="web代码" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="javaScript设计模式与开发实际" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="第三章闭包和高阶函数" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="webLearn" type="b2602c69:ProjectViewProjectNode" />
-              <item name="webLearn" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="web代码" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="javaScript设计模式与开发实际" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="第三章闭包和高阶函数" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="高阶函数" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="webLearn" type="b2602c69:ProjectViewProjectNode" />
-              <item name="webLearn" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="web代码" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="javaScript设计模式与开发实际" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="第三章闭包和高阶函数" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="高阶函数" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="3.2.1函数作为参数传递" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="13第十三章职责连模式" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -217,12 +237,18 @@
       <workItem from="1536197163626" duration="1815000" />
       <workItem from="1536544289596" duration="10956000" />
       <workItem from="1536652609199" duration="6189000" />
-      <workItem from="1536715809869" duration="1304000" />
+      <workItem from="1536715809869" duration="1992000" />
+      <workItem from="1540352071762" duration="55000" />
+      <workItem from="1540451050213" duration="226000" />
+      <workItem from="1540451850071" duration="654000" />
+      <workItem from="1542871078950" duration="2604000" />
+      <workItem from="1542959321817" duration="652000" />
+      <workItem from="1543218010607" duration="2805000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="42296000" />
+    <option name="totallyTimeSpent" value="49980000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -234,16 +260,17 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1911" y="-9" width="2516" height="1458" extended-state="7" />
+    <frame x="1911" y="-9" width="2516" height="1458" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21990173" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1895987" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32996893" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32919255" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32919255" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32919255" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -301,56 +328,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/web代码/javaScript设计模式与开发实际/第十一章模板方法模式/11.5钩子方法.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1260">
-          <caret line="35" column="0" lean-forward="true" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web代码/javaScript设计模式与开发实际/第十章组合模式/10.1回顾宏命令.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1476">
-          <caret line="41" column="36" lean-forward="true" selection-start-line="38" selection-start-column="3" selection-end-line="41" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web代码/javaScript设计模式与开发实际/第十章组合模式/10.4更强大的宏命令.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1692">
-          <caret line="47" column="29" lean-forward="true" selection-start-line="47" selection-start-column="29" selection-end-line="47" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web代码/javaScript设计模式与开发实际/第十章组合模式/10.7组合模式的例子——扫描文件夹.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1800">
-          <caret line="50" column="0" lean-forward="true" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web代码/javaScript设计模式与开发实际/第十章组合模式/10.9引用父对象.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2340">
-          <caret line="65" column="0" lean-forward="true" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web代码/javaScript权威指南/第九章 类和模块/9.1类和原型/9.1类和原型.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web代码/ES6标准入门/第九章 对象的扩展/Object.assign/基本用法.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="2" column="6" lean-forward="false" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web代码/ES6标准入门/第九章 对象的扩展/Object.values/用法.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="468">
@@ -579,20 +556,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web代码/ES6标准入门/第九章 对象的扩展/Object.values/用法.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="4" column="19" lean-forward="false" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web代码/ES6标准入门/第九章 对象的扩展/Object.assign/基本用法.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="2" column="6" lean-forward="false" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web代码/javaScript权威指南/第九章 类和模块/9.1类和原型/9.1类和原型.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="612">
@@ -600,61 +563,125 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web代码/javaScript设计模式与开发实际/第十章组合模式/10.4更强大的宏命令.html">
+    <entry file="file://$PROJECT_DIR$/web代码/javaScript设计模式与开发实际/3第三章闭包和高阶函数/高阶函数/3.2.1函数作为参数传递/1回调函数.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="736">
-          <caret line="47" column="29" lean-forward="false" selection-start-line="47" selection-start-column="29" selection-end-line="47" selection-end-column="29" />
+        <state relative-caret-position="288">
+          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web代码/javaScript设计模式与开发实际/第十章组合模式/10.1回顾宏命令.html">
+    <entry file="file://$PROJECT_DIR$/web代码/javaScript设计模式与开发实际/3第三章闭包和高阶函数/闭包/变量的生存周期.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="412">
-          <caret line="41" column="36" lean-forward="false" selection-start-line="38" selection-start-column="3" selection-end-line="41" selection-end-column="36" />
+        <state relative-caret-position="432">
+          <caret line="48" column="24" lean-forward="true" selection-start-line="48" selection-start-column="24" selection-end-line="48" selection-end-column="24" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web代码/javaScript设计模式与开发实际/第十章组合模式/10.9引用父对象.html">
+    <entry file="file://$PROJECT_DIR$/web代码/ES6标准入门/第九章 对象的扩展/Object.values/用法.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="65" column="0" lean-forward="false" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
+        <state relative-caret-position="180">
+          <caret line="5" column="7" lean-forward="true" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web代码/javaScript设计模式与开发实际/第十章组合模式/10.7组合模式的例子——扫描文件夹.html">
+    <entry file="file://$PROJECT_DIR$/web代码/ES6标准入门/第九章 对象的扩展/Object.assign/基本用法.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1800">
+        <state relative-caret-position="180">
+          <caret line="5" column="7" lean-forward="true" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web代码/javaScript设计模式与开发实际/4第四章单例模式/惰性单例/通用的惰性单例.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web代码/javaScript设计模式与开发实际/10第十章组合模式/10.1回顾宏命令.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="8">
+          <caret line="25" column="16" lean-forward="true" selection-start-line="25" selection-start-column="16" selection-end-line="25" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web代码/javaScript设计模式与开发实际/10第十章组合模式/10.4更强大的宏命令.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="548">
+          <caret line="84" column="59" lean-forward="false" selection-start-line="84" selection-start-column="59" selection-end-line="84" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web代码/javaScript设计模式与开发实际/10第十章组合模式/10.7组合模式的例子——扫描文件夹.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-64">
           <caret line="50" column="0" lean-forward="false" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web代码/javaScript设计模式与开发实际/第十一章模板方法模式/11.2泡一杯咖啡和泡一壶茶.html">
+    <entry file="file://$PROJECT_DIR$/web代码/javaScript设计模式与开发实际/10第十章组合模式/10.9引用父对象.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="692">
-          <caret line="56" column="6" lean-forward="true" selection-start-line="45" selection-start-column="3" selection-end-line="56" selection-end-column="6" />
+        <state relative-caret-position="72">
+          <caret line="65" column="0" lean-forward="false" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web代码/javaScript设计模式与开发实际/第十一章模板方法模式/11.2.3抽离父类.html">
+    <entry file="file://$PROJECT_DIR$/web代码/javaScript设计模式与开发实际/11第十一章模板方法模式/11.2泡一杯咖啡和泡一壶茶.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="828">
-          <caret line="23" column="20" lean-forward="false" selection-start-line="23" selection-start-column="20" selection-end-line="23" selection-end-column="20" />
+        <state relative-caret-position="-136">
+          <caret line="40" column="17" lean-forward="false" selection-start-line="40" selection-start-column="17" selection-end-line="40" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web代码/javaScript设计模式与开发实际/11第十一章模板方法模式/11.5钩子方法.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="39" column="38" lean-forward="false" selection-start-line="39" selection-start-column="38" selection-end-line="39" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web代码/javaScript设计模式与开发实际/11第十一章模板方法模式/11.2.3抽离父类.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-424">
+          <caret line="7" column="8" lean-forward="true" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web代码/javaScript设计模式与开发实际/8第八章发布-订阅模式/DOM事件.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web代码/javaScript设计模式与开发实际/13第十三章职责连模式/13.2 实际开发中的职责链模式.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="620">
+          <caret line="49" column="35" lean-forward="true" selection-start-line="49" selection-start-column="35" selection-end-line="49" selection-end-column="35" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web代码/javaScript设计模式与开发实际/第三章闭包和高阶函数/高阶函数/3.2.1函数作为参数传递/1回调函数.html">
+    <entry file="file://$PROJECT_DIR$/web代码/javaScript设计模式与开发实际/13第十三章职责连模式/13.3 用职责链模式重构代码.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+        <state relative-caret-position="1484">
+          <caret line="50" column="9" lean-forward="true" selection-start-line="50" selection-start-column="9" selection-end-line="50" selection-end-column="9" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web代码/javaScript设计模式与开发实际/第十一章模板方法模式/11.5钩子方法.html">
+    <entry file="file://$PROJECT_DIR$/web代码/javaScript设计模式与开发实际/13第十三章职责连模式/13.4 灵活可拆分的职责链节点.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="35" column="0" lean-forward="false" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+        <state relative-caret-position="1368">
+          <caret line="62" column="34" lean-forward="false" selection-start-line="62" selection-start-column="34" selection-end-line="62" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web代码/javaScript设计模式与开发实际/13第十三章职责连模式/13.5 异步的职责链.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
           <folding />
         </state>
       </provider>
