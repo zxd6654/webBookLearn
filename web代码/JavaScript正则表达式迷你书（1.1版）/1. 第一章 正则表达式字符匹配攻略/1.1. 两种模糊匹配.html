@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    正则表达式是匹配模式，要么匹配字符，要么匹配位置。
+</head>
+<body>
+<script>
+    //正则表达式之所以厉害，是因为其能实现模糊匹配
+    //模糊匹配，有两个方向上的‘模糊’：横向模糊和纵向模糊
+
+    /**1.横向模糊匹配*/
+        //横向模糊指的是，一个正则可匹配的字符串的长度不是固定的，可以使多种情况的。
+        //其实现方式是使用量词，比如{m,n}  表示连续出现最少 m 次，最多 n 次。
+
+    var regex = /ab{2,5}c/g;
+    var string = "abc abbc abbbc abbbbc abbbbbc abbbbbbc";
+    console.log(string.match(regex));
+
+    //案例中用的正则是 /ab{2,5}c/g，其中 g 是正则的一个修饰符。表示全局匹配，即，在目
+    //标字符串中按顺序找到满足匹配模式的所有子串
+
+    /**2.纵向模糊匹配*/
+        //纵向模糊指的是。一个正则匹配的字符串，具体到某一位字符时，他可以不是某个确定的字符，可以有多种可能。
+        //其实现方式是使用字符组，譬如 [abc]，表示该字符是可以字符 "a"、"b"、"c" 中的任何一个
+
+    var regex1 = /a[123]b/g;
+    var string1 = "a0b a1b a2b a3b a4b";
+    console.log(string1.match(regex1));
+
+
+</script>
+</body>
+</html>
