@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    量词也称重复。
+</head>
+<body>
+<script>
+    /**简写形式*/
+    //todo {m,} 表示至少出现 m 次。
+    //todo {m} 等价于 {m,m}，表示出现 m 次。
+    //todo ? 等价于 {0,1}，表示出现或者不出现。记忆方式：问号的意思表示，有吗？
+    //todo +等价于 {1,}，表示出现至少一次。记忆方式：加号是追加的意思，得先有一个，然后才考虑追加。
+    //todo *等价于 {0,}，表示出现任意次，有可能不出现。记忆方式：看看天上的星星，可能一颗没有，可能零散有几颗，可能数也数不过来。
+
+    /**贪婪匹配与惰性匹配*/
+        //贪婪匹配 - 会尽可能多的匹配
+    var regex = /\d{2,5}/g;
+    var string = "123 1234 12345 123456";
+    console.log(string.match(regex));
+
+    //惰性匹配 - 会尽可能少的匹配
+    var regex = /\d{2,5}?/g;
+    var string = "123 1234 12345 123456";
+    console.log(string.match(regex));
+    //其中 /\d{2,5}?/ 表示，虽然 2 到 5 次都行，当 2 个就够的时候，就不再往下尝试了
+</script>
+</body>
+</html>
