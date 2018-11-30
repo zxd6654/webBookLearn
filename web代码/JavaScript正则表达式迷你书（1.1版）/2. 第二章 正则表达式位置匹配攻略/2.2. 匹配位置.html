@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    在ES5中，共有6个锚：
+    ^,$,\b,\B,(?=p),(?!p)
+    对应的可视化形式： /^$\b\B(?=a)(?!b)/g
+</head>
+<body>
+<script>
+    /**2.2.1. ^ 和 $*/
+        //^(脱字符)匹配开头，在多行匹配中匹配行开头。
+        //$（美元符号）匹配结尾，在多行匹配中匹配行结尾。
+    var result = "hello".replace(/^|$/g, '#');
+    console.log(result);
+    // => "#hello#"
+
+    //多行匹配模式（即有修饰符 m）时，二者是行的概念，这一点需要我们注意：
+    var result = "I\nlove\njavascript".replace(/^|$/gm, '#');
+    console.log(result);
+    /*
+    #I#
+    #love#
+    #javascript#
+    */
+
+    /**2.2.2. \b 和 \B*/
+
+
+    /**2.3. 位置的特性*/
+</script>
+</body>
+</html>
