@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //1 使用eval
+    function foo(str, a) {
+        eval(str); // 欺骗！   在严格模式的程序中，eval(..) 在运行时有其自己的词法作用域，意味着其中的声明无法修改所在的作用域
+        console.log(a, b);
+    }
+
+    var b = 2;
+    foo("var b = 3;", 1); // 1, 3
+
+    //2 with
+    //with 通常被当作重复引用同一个对象中的多个属性的快捷方式，可以不需要重复引用对象本身
+
+    var obj = {
+        a: 1,
+        b: 2,
+        c: 3
+    };
+    // 单调乏味的重复 "obj"
+    obj.a = 2;
+    obj.b = 3;
+    obj.c = 4;
+    // 简单的快捷方式
+    with (obj) {
+        a = 3;
+        b = 4;
+        c = 5;
+    }
+
+    console.log(obj);
+
+
+</script>
+</body>
+</html>
