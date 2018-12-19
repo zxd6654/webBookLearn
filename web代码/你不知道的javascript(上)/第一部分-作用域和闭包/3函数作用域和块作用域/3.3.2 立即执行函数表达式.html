@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+var a = 2;
+(function foo() {
+var a = 3;
+console.log( a ); // 3
+})();
+console.log( a ); // 2
+由于函数被包含在一对 ( ) 括号内部，因此成为了一个表达式，通过在末尾加上另外一个
+( ) 可以立即执行这个函数，比如 (function foo(){ .. })()。第一个 ( ) 将函数变成表
+达式，第二个 ( ) 执行了这个函数。
+</body>
+</html>

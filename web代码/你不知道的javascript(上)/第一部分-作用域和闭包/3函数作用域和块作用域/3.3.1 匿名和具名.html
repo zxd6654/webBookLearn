@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+区分函数声明和表达式最简单的方法:
+
+是看 function 关键字出现在声明中的位
+置（不仅仅是一行代码，而是整个声明中的位置）。如果 function 是声明
+的第一个词，那么就是一个函数声明，否则就是一个函数表达式。
+
+setTimeout( function() {
+console.log("I waited 1 second!");
+}, 1000 );
+这叫作匿名函数表达式，因为 function().. 没有名称标识
+</body>
+</html>
