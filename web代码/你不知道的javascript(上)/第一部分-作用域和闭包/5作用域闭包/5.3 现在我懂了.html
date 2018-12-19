@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function wait(message) {
+        setTimeout(function timer() {
+            console.log(message);
+        }, 1000);
+    }
+
+    wait("Hello, closure!");
+</script>
+如果将函数（访问它们各自的词法作用域）当作第一
+级的值类型并到处传递，你就会看到闭包在这些函数中的应用。在定时器、事件监听器、
+Ajax 请求、跨窗口通信、Web Workers 或者任何其他的异步（或者同步）任务中，只要使
+用了回调函数，实际上就是在使用闭包！
+</body>
+</html>

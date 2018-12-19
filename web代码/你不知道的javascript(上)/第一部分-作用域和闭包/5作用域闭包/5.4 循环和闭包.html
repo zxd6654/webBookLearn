@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+要说明闭包，for 循环是最常见的例子
+<script>
+    for (var i = 1; i <= 5; i++) {
+        (function (j) {
+            setTimeout(function timer() {
+                console.log(j);
+            }, j * 1000);
+        })(i)
+    }
+
+    for (let i = 1; i <= 5; i++) {
+        setTimeout(function timer() {
+            console.log(i);
+        }, i * 1000);
+    }
+</script>
+</body>
+</html>
