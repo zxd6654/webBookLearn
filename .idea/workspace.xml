@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c7d9eca9-189b-45ae-895b-0271f3181617" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web代码/你不知道的javascript(上)/第一部分-作用域和闭包/3函数作用域和块作用域/3.1 函数中的作用域.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web代码/你不知道的javascript(上)/第一部分-作用域和闭包/3函数作用域和块作用域/3.2 隐藏内部实现.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web代码/你不知道的javascript(上)/第一部分-作用域和闭包/3函数作用域和块作用域/3.3.1 匿名和具名.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web代码/你不知道的javascript(上)/第一部分-作用域和闭包/3函数作用域和块作用域/3.3.2 立即执行函数表达式.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web代码/你不知道的javascript(上)/第一部分-作用域和闭包/3函数作用域和块作用域/3.4 块作用域.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web代码/你不知道的javascript(上)/第一部分-作用域和闭包/4提升/4.1 先有鸡还是先有蛋.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web代码/你不知道的javascript(上)/第一部分-作用域和闭包/4提升/4.3 函数优先.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -21,7 +18,7 @@
       <file leaf-file-name="2.1词法阶段.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web代码/你不知道的javascript(上)/第一部分-作用域和闭包/2词法作用域/2.1词法阶段.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="612">
+            <state relative-caret-position="0">
               <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
               <folding />
             </state>
@@ -31,58 +28,28 @@
       <file leaf-file-name="2.2欺骗词法.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web代码/你不知道的javascript(上)/第一部分-作用域和闭包/2词法作用域/2.2欺骗词法.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="900">
-              <caret line="25" column="10" lean-forward="false" selection-start-line="25" selection-start-column="10" selection-end-line="25" selection-end-column="10" />
+            <state relative-caret-position="612">
+              <caret line="17" column="12" lean-forward="false" selection-start-line="17" selection-start-column="12" selection-end-line="17" selection-end-column="12" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="3.1 函数中的作用域.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web代码/你不知道的javascript(上)/第一部分-作用域和闭包/3函数作用域和块作用域/3.1 函数中的作用域.html">
+      <file leaf-file-name="4.1 先有鸡还是先有蛋.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/web代码/你不知道的javascript(上)/第一部分-作用域和闭包/4提升/4.1 先有鸡还是先有蛋.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="10" column="18" lean-forward="false" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
+            <state relative-caret-position="1088">
+              <caret line="38" column="28" lean-forward="false" selection-start-line="38" selection-start-column="28" selection-end-line="38" selection-end-column="28" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="3.2 隐藏内部实现.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web代码/你不知道的javascript(上)/第一部分-作用域和闭包/3函数作用域和块作用域/3.2 隐藏内部实现.html">
+      <file leaf-file-name="4.3 函数优先.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web代码/你不知道的javascript(上)/第一部分-作用域和闭包/4提升/4.3 函数优先.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="792">
-              <caret line="22" column="7" lean-forward="true" selection-start-line="22" selection-start-column="7" selection-end-line="22" selection-end-column="7" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="3.3.1 匿名和具名.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web代码/你不知道的javascript(上)/第一部分-作用域和闭包/3函数作用域和块作用域/3.3.1 匿名和具名.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="576">
-              <caret line="16" column="33" lean-forward="false" selection-start-line="16" selection-start-column="33" selection-end-line="16" selection-end-column="33" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="3.3.2 立即执行函数表达式.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web代码/你不知道的javascript(上)/第一部分-作用域和闭包/3函数作用域和块作用域/3.3.2 立即执行函数表达式.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="540">
-              <caret line="15" column="19" lean-forward="true" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="3.4 块作用域.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/web代码/你不知道的javascript(上)/第一部分-作用域和闭包/3函数作用域和块作用域/3.4 块作用域.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="540">
-              <caret line="15" column="31" lean-forward="false" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="31" />
+            <state relative-caret-position="252">
+              <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -160,6 +127,8 @@
         <option value="$PROJECT_DIR$/web代码/你不知道的javascript(上)/第一部分-作用域和闭包/3函数作用域和块作用域/3.3.1 匿名和具名.html" />
         <option value="$PROJECT_DIR$/web代码/你不知道的javascript(上)/第一部分-作用域和闭包/3函数作用域和块作用域/3.3.2 立即执行函数表达式.html" />
         <option value="$PROJECT_DIR$/web代码/你不知道的javascript(上)/第一部分-作用域和闭包/3函数作用域和块作用域/3.4 块作用域.html" />
+        <option value="$PROJECT_DIR$/web代码/你不知道的javascript(上)/第一部分-作用域和闭包/4提升/4.3 函数优先.html" />
+        <option value="$PROJECT_DIR$/web代码/你不知道的javascript(上)/第一部分-作用域和闭包/4提升/4.1 先有鸡还是先有蛋.html" />
       </list>
     </option>
   </component>
@@ -231,7 +200,7 @@
               <item name="web代码" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="你不知道的javascript(上)" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="第一部分-作用域和闭包" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="3函数作用域和块作用域" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="4提升" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
@@ -312,7 +281,7 @@
       <workItem from="1544693038006" duration="650000" />
       <workItem from="1544759257455" duration="1587000" />
       <workItem from="1545114299222" duration="4355000" />
-      <workItem from="1545184006689" duration="2211000" />
+      <workItem from="1545184006689" duration="5625000" />
     </task>
     <task id="LOCAL-00001" summary="使用快捷提交">
       <created>1544759584426</created>
@@ -325,7 +294,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="87365000" />
+    <option name="totallyTimeSpent" value="90779000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -409,20 +378,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/web代码/锋利的jquery/js/jquery.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web代码/javaScript面向对象编程指南/第七章浏览器环境/1概述/概述.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -709,7 +664,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web代码/你不知道的javascript(上)/第一部分-作用域和闭包/2词法作用域/2.1词法阶段.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
+        <state relative-caret-position="0">
           <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
           <folding />
         </state>
@@ -723,34 +678,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web代码/你不知道的javascript(上)/第一部分-作用域和闭包/2词法作用域/2.2欺骗词法.html">
+    <entry file="file://$PROJECT_DIR$/web代码/你不知道的javascript(上)/第一部分-作用域和闭包/3函数作用域和块作用域/3.4 块作用域.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="900">
-          <caret line="25" column="10" lean-forward="false" selection-start-line="25" selection-start-column="10" selection-end-line="25" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web代码/你不知道的javascript(上)/第一部分-作用域和闭包/3函数作用域和块作用域/3.1 函数中的作用域.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="10" column="18" lean-forward="false" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web代码/你不知道的javascript(上)/第一部分-作用域和闭包/3函数作用域和块作用域/3.2 隐藏内部实现.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="792">
-          <caret line="22" column="7" lean-forward="true" selection-start-line="22" selection-start-column="7" selection-end-line="22" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web代码/你不知道的javascript(上)/第一部分-作用域和闭包/3函数作用域和块作用域/3.3.1 匿名和具名.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="576">
-          <caret line="16" column="33" lean-forward="false" selection-start-line="16" selection-start-column="33" selection-end-line="16" selection-end-column="33" />
+        <state relative-caret-position="612">
+          <caret line="17" column="9" lean-forward="true" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
           <folding />
         </state>
       </provider>
@@ -763,10 +694,50 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web代码/你不知道的javascript(上)/第一部分-作用域和闭包/3函数作用域和块作用域/3.4 块作用域.html">
+    <entry file="file://$PROJECT_DIR$/web代码/你不知道的javascript(上)/第一部分-作用域和闭包/3函数作用域和块作用域/3.3.1 匿名和具名.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="15" column="31" lean-forward="false" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="31" />
+        <state relative-caret-position="576">
+          <caret line="16" column="33" lean-forward="false" selection-start-line="16" selection-start-column="33" selection-end-line="16" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web代码/你不知道的javascript(上)/第一部分-作用域和闭包/3函数作用域和块作用域/3.2 隐藏内部实现.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="792">
+          <caret line="22" column="7" lean-forward="true" selection-start-line="22" selection-start-column="7" selection-end-line="22" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web代码/你不知道的javascript(上)/第一部分-作用域和闭包/3函数作用域和块作用域/3.1 函数中的作用域.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="10" column="18" lean-forward="false" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web代码/你不知道的javascript(上)/第一部分-作用域和闭包/2词法作用域/2.2欺骗词法.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="17" column="12" lean-forward="false" selection-start-line="17" selection-start-column="12" selection-end-line="17" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web代码/你不知道的javascript(上)/第一部分-作用域和闭包/4提升/4.3 函数优先.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web代码/你不知道的javascript(上)/第一部分-作用域和闭包/4提升/4.1 先有鸡还是先有蛋.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1088">
+          <caret line="38" column="28" lean-forward="false" selection-start-line="38" selection-start-column="28" selection-end-line="38" selection-end-column="28" />
           <folding />
         </state>
       </provider>
