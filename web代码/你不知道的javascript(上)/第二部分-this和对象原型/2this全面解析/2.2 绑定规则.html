@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+你必须找到调用位置，然后判断需要应用下面四条规则中的哪一条。
+<script>
+    /**默认绑定**/
+    //首先要介绍的是最常用的函数调用类型：独立函数调用。可以把这条规则看作是无法应用
+    //其他规则时的默认规则
+    //    function foo() {
+    //        console.log(this.a);
+    //    }
+    //
+    //    var a = 2;
+    //    foo(); // 2
+
+    //接下来我们可以看到当调用 foo() 时，this.a 被解析成了全局变量 a。为什么？因为在本
+    //例中，函数调用时应用了 this 的默认绑定，因此 this 指向全局对象。
+
+    //在代码中，foo() 是直接使用不带任何修饰的函数引用进行调用的，因此只能使用
+    //默认绑定，无法应用其他规则
+
+    //如果使用严格模式（strict mode），那么全局对象将无法使用默认绑定，因此 this 会绑定
+    //到 undefined
+
+    //，虽然 this 的绑定规则完全取决于调用位置，但是只
+    //有 foo() 运行在非 strict mode 下时，默认绑定才能绑定到全局对象；严格模式下与 foo()
+    //的调用位置无关：
+
+    /**隐式绑定**/
+    // 思考下面的代码：
+    //    function foo() {
+    //        console.log(this.a);
+    //    }
+    //
+    //    var obj = {
+    //        a: 2,
+    //        foo: foo
+    //    };
+    //    obj.foo(); // 2
+
+    //当 foo() 被调用时，它的落脚点确实指向 obj 对象。当函数引
+    //用有上下文对象时，隐式绑定规则会把函数调用中的 this 绑定到这个上下文对象。因为调
+    //用 foo() 时 this 被绑定到 obj，因此 this.a 和 obj.a 是一样的
+
+    //对象属性引用链中只有最顶层或者说最后一层会影响调用位置。举例来说：
+    //    function foo() {
+    //        console.log(this.a);
+    //    }
+    //
+    //    var obj2 = {
+    //        a: 42,
+    //        foo: foo
+    //    };
+    //    var obj1 = {
+    //        a: 2,
+    //        obj2: obj2
+    //    };
+    //    obj1.obj2.foo(); // 42
+
+    /**显式绑定  强制绑定(硬绑定)**/
+    //以使用 call(..) 和 apply(..) 方法。
+
+    //如果你传入了一个原始值（字符串类型、布尔类型或者数字类型）来当作 this 的绑定对
+    //象，这个原始值会被转换成它的对象形式（也就是 new String(..)、new Boolean(..) 或者
+    //new Number(..)）。这通常被称为“装箱”
+
+    /**new绑定**/
+    function foo(a) {
+        this.a = a;
+    }
+
+    var bar = new foo(2);
+    console.log(bar.a); // 2
+
+    //使用 new 来调用 foo(..) 时，我们会构造一个新对象并把它绑定到 foo(..) 调用中的 this
+    //上。new 是最后一种可以影响函数调用时 this 绑定行为的方法，我们称之为 new 绑定。
+</script>
+</body>
+</html>
