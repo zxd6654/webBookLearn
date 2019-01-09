@@ -2,9 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c7d9eca9-189b-45ae-895b-0271f3181617" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web代码/你不知道的javascript(上)/第二部分-this和对象原型/3对象/3.2 类型.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web代码/你不知道的javascript(上)/第二部分-this和对象原型/3对象/3.3内容/3.3.4 复制对象.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web代码/你不知道的javascript(上)/第一部分-作用域和闭包/4提升/4.1 先有鸡还是先有蛋.html" afterPath="$PROJECT_DIR$/web代码/你不知道的javascript(上)/第一部分-作用域和闭包/4提升/4.1 先有鸡还是先有蛋.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web代码/你不知道的javascript(上)/第一部分-作用域和闭包/5作用域闭包/5.2 实质问题.html" afterPath="$PROJECT_DIR$/web代码/你不知道的javascript(上)/第一部分-作用域和闭包/5作用域闭包/5.2 实质问题.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web代码/你不知道的javascript(上)/第一部分-作用域和闭包/5作用域闭包/5.3 现在我懂了.html" afterPath="$PROJECT_DIR$/web代码/你不知道的javascript(上)/第一部分-作用域和闭包/5作用域闭包/5.3 现在我懂了.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web代码/你不知道的javascript(上)/第一部分-作用域和闭包/5作用域闭包/5.4 循环和闭包.html" afterPath="$PROJECT_DIR$/web代码/你不知道的javascript(上)/第一部分-作用域和闭包/5作用域闭包/5.4 循环和闭包.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -15,21 +17,101 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="3.2 类型.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/web代码/你不知道的javascript(上)/第二部分-this和对象原型/3对象/3.2 类型.html">
+      <file leaf-file-name="3.2 隐藏内部实现.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web代码/你不知道的javascript(上)/第一部分-作用域和闭包/3函数作用域和块作用域/3.2 隐藏内部实现.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1476">
-              <caret line="41" column="65" lean-forward="false" selection-start-line="41" selection-start-column="65" selection-end-line="41" selection-end-column="65" />
+            <state relative-caret-position="792">
+              <caret line="22" column="7" lean-forward="true" selection-start-line="22" selection-start-column="7" selection-end-line="22" selection-end-column="7" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="3.3.4 复制对象.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web代码/你不知道的javascript(上)/第二部分-this和对象原型/3对象/3.3内容/3.3.4 复制对象.html">
+      <file leaf-file-name="3.3.1 匿名和具名.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web代码/你不知道的javascript(上)/第一部分-作用域和闭包/3函数作用域和块作用域/3.3.1 匿名和具名.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+            <state relative-caret-position="576">
+              <caret line="16" column="33" lean-forward="false" selection-start-line="16" selection-start-column="33" selection-end-line="16" selection-end-column="33" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="3.3.2 立即执行函数表达式.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web代码/你不知道的javascript(上)/第一部分-作用域和闭包/3函数作用域和块作用域/3.3.2 立即执行函数表达式.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="540">
+              <caret line="15" column="19" lean-forward="true" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="3.4 块作用域.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web代码/你不知道的javascript(上)/第一部分-作用域和闭包/3函数作用域和块作用域/3.4 块作用域.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="612">
+              <caret line="17" column="9" lean-forward="true" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="4.1 先有鸡还是先有蛋.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web代码/你不知道的javascript(上)/第一部分-作用域和闭包/4提升/4.1 先有鸡还是先有蛋.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="764">
+              <caret line="31" column="0" lean-forward="true" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="4.3 函数优先.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web代码/你不知道的javascript(上)/第一部分-作用域和闭包/4提升/4.3 函数优先.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="324">
+              <caret line="9" column="28" lean-forward="false" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="5.2 实质问题.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web代码/你不知道的javascript(上)/第一部分-作用域和闭包/5作用域闭包/5.2 实质问题.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-172">
+              <caret line="11" column="15" lean-forward="false" selection-start-line="11" selection-start-column="15" selection-end-line="11" selection-end-column="15" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="5.3 现在我懂了.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web代码/你不知道的javascript(上)/第一部分-作用域和闭包/5作用域闭包/5.3 现在我懂了.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="612">
+              <caret line="17" column="55" lean-forward="false" selection-start-line="17" selection-start-column="55" selection-end-line="17" selection-end-column="55" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="5.4 循环和闭包.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web代码/你不知道的javascript(上)/第一部分-作用域和闭包/5作用域闭包/5.4 循环和闭包.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="720">
+              <caret line="20" column="22" lean-forward="false" selection-start-line="20" selection-start-column="22" selection-end-line="20" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="5.5 模块.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/web代码/你不知道的javascript(上)/第一部分-作用域和闭包/5作用域闭包/5.5 模块.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="828">
+              <caret line="23" column="16" lean-forward="true" selection-start-line="23" selection-start-column="16" selection-end-line="23" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -94,12 +176,8 @@
         <option value="$PROJECT_DIR$/web代码/你不知道的javascript(上)/第一部分-作用域和闭包/3函数作用域和块作用域/3.3.1 匿名和具名.html" />
         <option value="$PROJECT_DIR$/web代码/你不知道的javascript(上)/第一部分-作用域和闭包/3函数作用域和块作用域/3.3.2 立即执行函数表达式.html" />
         <option value="$PROJECT_DIR$/web代码/你不知道的javascript(上)/第一部分-作用域和闭包/3函数作用域和块作用域/3.4 块作用域.html" />
-        <option value="$PROJECT_DIR$/web代码/你不知道的javascript(上)/第一部分-作用域和闭包/4提升/4.1 先有鸡还是先有蛋.html" />
         <option value="$PROJECT_DIR$/web代码/你不知道的javascript(上)/第一部分-作用域和闭包/4提升/4.3 函数优先.html" />
-        <option value="$PROJECT_DIR$/web代码/你不知道的javascript(上)/第一部分-作用域和闭包/5作用域闭包/5.2 实质问题.html" />
         <option value="$PROJECT_DIR$/web代码/你不知道的javascript(上)/第一部分-作用域和闭包/5作用域闭包/5.3 现在我懂了.css" />
-        <option value="$PROJECT_DIR$/web代码/你不知道的javascript(上)/第一部分-作用域和闭包/5作用域闭包/5.3 现在我懂了.html" />
-        <option value="$PROJECT_DIR$/web代码/你不知道的javascript(上)/第一部分-作用域和闭包/5作用域闭包/5.4 循环和闭包.html" />
         <option value="$PROJECT_DIR$/web代码/你不知道的javascript(上)/第一部分-作用域和闭包/5作用域闭包/5.5 模块.html" />
         <option value="$PROJECT_DIR$/web代码/你不知道的javascript(上)/第二部分-this和对象原型/1关于this/1.2.1 指向自身.html" />
         <option value="$PROJECT_DIR$/web代码/你不知道的javascript(上)/第二部分-this和对象原型/1关于this/1.2.1误解-指向自身.html" />
@@ -110,6 +188,10 @@
         <option value="$PROJECT_DIR$/web代码/你不知道的javascript(上)/第二部分-this和对象原型/2this全面解析/2.5 this词法.html" />
         <option value="$PROJECT_DIR$/web代码/你不知道的javascript(上)/第二部分-this和对象原型/3对象/3.2 类型.html" />
         <option value="$PROJECT_DIR$/web代码/你不知道的javascript(上)/第二部分-this和对象原型/3对象/3.3内容/3.3.4 复制对象.html" />
+        <option value="$PROJECT_DIR$/web代码/你不知道的javascript(上)/第一部分-作用域和闭包/4提升/4.1 先有鸡还是先有蛋.html" />
+        <option value="$PROJECT_DIR$/web代码/你不知道的javascript(上)/第一部分-作用域和闭包/5作用域闭包/5.2 实质问题.html" />
+        <option value="$PROJECT_DIR$/web代码/你不知道的javascript(上)/第一部分-作用域和闭包/5作用域闭包/5.3 现在我懂了.html" />
+        <option value="$PROJECT_DIR$/web代码/你不知道的javascript(上)/第一部分-作用域和闭包/5作用域闭包/5.4 循环和闭包.html" />
       </list>
     </option>
   </component>
@@ -181,6 +263,53 @@
               <item name="你不知道的javascript(上)" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="第一部分-作用域和闭包" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="1作用域是什么" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="webLearn" type="b2602c69:ProjectViewProjectNode" />
+              <item name="webLearn" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="web代码" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="你不知道的javascript(上)" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="第一部分-作用域和闭包" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="2词法作用域" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="webLearn" type="b2602c69:ProjectViewProjectNode" />
+              <item name="webLearn" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="web代码" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="你不知道的javascript(上)" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="第一部分-作用域和闭包" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="3函数作用域和块作用域" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="webLearn" type="b2602c69:ProjectViewProjectNode" />
+              <item name="webLearn" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="web代码" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="你不知道的javascript(上)" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="第一部分-作用域和闭包" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="4提升" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="webLearn" type="b2602c69:ProjectViewProjectNode" />
+              <item name="webLearn" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="web代码" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="你不知道的javascript(上)" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="第一部分-作用域和闭包" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="5作用域闭包" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="webLearn" type="b2602c69:ProjectViewProjectNode" />
+              <item name="webLearn" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="web代码" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="你不知道的javascript(上)" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="第二部分-this和对象原型" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="webLearn" type="b2602c69:ProjectViewProjectNode" />
+              <item name="webLearn" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="web代码" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="你不知道的javascript(上)" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="第二部分-this和对象原型" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="3对象" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
@@ -270,7 +399,7 @@
       <workItem from="1545269582496" duration="13303000" />
       <workItem from="1545354513682" duration="7511000" />
       <workItem from="1546843199991" duration="798000" />
-      <workItem from="1547012729190" duration="1306000" />
+      <workItem from="1547012729190" duration="4554000" />
     </task>
     <task id="LOCAL-00001" summary="使用快捷提交">
       <created>1544759584426</created>
@@ -283,7 +412,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="118905000" />
+    <option name="totallyTimeSpent" value="122153000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -296,8 +425,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1911" y="-9" width="2516" height="1458" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23054872" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15642916" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32996893" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -499,20 +629,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web代码/你不知道的javascript(上)/第一部分-作用域和闭包/1作用域是什么/1.4异常.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="15" lean-forward="false" selection-start-line="0" selection-start-column="15" selection-end-line="0" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web代码/你不知道的javascript(上)/第一部分-作用域和闭包/1作用域是什么/1.3作用域的嵌套.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="10" column="7" lean-forward="false" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -521,101 +637,10 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web代码/你不知道的javascript(上)/第一部分-作用域和闭包/5作用域闭包/5.3 现在我懂了.css" />
-    <entry file="file://$PROJECT_DIR$/web代码/你不知道的javascript(上)/第一部分-作用域和闭包/2词法作用域/2.1词法阶段.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="648">
-          <caret line="27" column="28" lean-forward="true" selection-start-line="27" selection-start-column="8" selection-end-line="27" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web代码/你不知道的javascript(上)/第一部分-作用域和闭包/2词法作用域/2.2欺骗词法.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="17" column="12" lean-forward="false" selection-start-line="17" selection-start-column="12" selection-end-line="17" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web代码/你不知道的javascript(上)/第二部分-this和对象原型/2this全面解析/2.5 this词法.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="764">
           <caret line="25" column="6" lean-forward="true" selection-start-line="25" selection-start-column="6" selection-end-line="25" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web代码/你不知道的javascript(上)/第一部分-作用域和闭包/3函数作用域和块作用域/3.1 函数中的作用域.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web代码/你不知道的javascript(上)/第一部分-作用域和闭包/3函数作用域和块作用域/3.2 隐藏内部实现.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="792">
-          <caret line="22" column="7" lean-forward="true" selection-start-line="22" selection-start-column="7" selection-end-line="22" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web代码/你不知道的javascript(上)/第一部分-作用域和闭包/3函数作用域和块作用域/3.3.1 匿名和具名.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="576">
-          <caret line="16" column="33" lean-forward="false" selection-start-line="16" selection-start-column="33" selection-end-line="16" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web代码/你不知道的javascript(上)/第一部分-作用域和闭包/3函数作用域和块作用域/3.3.2 立即执行函数表达式.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="15" column="19" lean-forward="true" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web代码/你不知道的javascript(上)/第一部分-作用域和闭包/3函数作用域和块作用域/3.4 块作用域.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="17" column="9" lean-forward="true" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web代码/你不知道的javascript(上)/第一部分-作用域和闭包/4提升/4.1 先有鸡还是先有蛋.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web代码/你不知道的javascript(上)/第一部分-作用域和闭包/4提升/4.3 函数优先.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="9" column="28" lean-forward="false" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web代码/你不知道的javascript(上)/第一部分-作用域和闭包/5作用域闭包/5.2 实质问题.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1116">
-          <caret line="40" column="34" lean-forward="false" selection-start-line="40" selection-start-column="34" selection-end-line="40" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web代码/你不知道的javascript(上)/第一部分-作用域和闭包/5作用域闭包/5.3 现在我懂了.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="14" column="28" lean-forward="false" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web代码/你不知道的javascript(上)/第一部分-作用域和闭包/5作用域闭包/5.4 循环和闭包.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="8" column="8" lean-forward="false" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web代码/你不知道的javascript(上)/第一部分-作用域和闭包/5作用域闭包/5.5 模块.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="828">
-          <caret line="23" column="16" lean-forward="true" selection-start-line="23" selection-start-column="16" selection-end-line="23" selection-end-column="16" />
         </state>
       </provider>
     </entry>
@@ -651,13 +676,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="728">
           <caret line="26" column="35" lean-forward="false" selection-start-line="26" selection-start-column="35" selection-end-line="26" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web代码/你不知道的javascript(上)/第一部分-作用域和闭包/1作用域是什么/1.2.2对话.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="11" column="7" lean-forward="true" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
         </state>
       </provider>
     </entry>
@@ -719,8 +737,136 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web代码/你不知道的javascript(上)/第二部分-this和对象原型/3对象/3.2 类型.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1476">
-          <caret line="41" column="65" lean-forward="false" selection-start-line="41" selection-start-column="65" selection-end-line="41" selection-end-column="65" />
+        <state relative-caret-position="116">
+          <caret line="19" column="19" lean-forward="false" selection-start-line="19" selection-start-column="19" selection-end-line="19" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web代码/你不知道的javascript(上)/第一部分-作用域和闭包/1作用域是什么/1.3作用域的嵌套.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web代码/你不知道的javascript(上)/第一部分-作用域和闭包/1作用域是什么/1.4异常.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="1" column="16" lean-forward="true" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web代码/你不知道的javascript(上)/第一部分-作用域和闭包/2词法作用域/2.1词法阶段.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="648">
+          <caret line="27" column="29" lean-forward="true" selection-start-line="27" selection-start-column="29" selection-end-line="27" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web代码/你不知道的javascript(上)/第一部分-作用域和闭包/2词法作用域/2.2欺骗词法.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="17" column="12" lean-forward="false" selection-start-line="17" selection-start-column="12" selection-end-line="17" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web代码/你不知道的javascript(上)/第一部分-作用域和闭包/1作用域是什么/1.2.2对话.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="11" column="7" lean-forward="true" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web代码/你不知道的javascript(上)/第一部分-作用域和闭包/3函数作用域和块作用域/3.1 函数中的作用域.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web代码/你不知道的javascript(上)/第一部分-作用域和闭包/3函数作用域和块作用域/3.2 隐藏内部实现.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="792">
+          <caret line="22" column="7" lean-forward="true" selection-start-line="22" selection-start-column="7" selection-end-line="22" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web代码/你不知道的javascript(上)/第一部分-作用域和闭包/3函数作用域和块作用域/3.3.1 匿名和具名.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="576">
+          <caret line="16" column="33" lean-forward="false" selection-start-line="16" selection-start-column="33" selection-end-line="16" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web代码/你不知道的javascript(上)/第一部分-作用域和闭包/3函数作用域和块作用域/3.3.2 立即执行函数表达式.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="15" column="19" lean-forward="true" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web代码/你不知道的javascript(上)/第一部分-作用域和闭包/3函数作用域和块作用域/3.4 块作用域.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="17" column="9" lean-forward="true" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web代码/你不知道的javascript(上)/第一部分-作用域和闭包/4提升/4.1 先有鸡还是先有蛋.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="764">
+          <caret line="31" column="0" lean-forward="true" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web代码/你不知道的javascript(上)/第一部分-作用域和闭包/4提升/4.3 函数优先.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="9" column="28" lean-forward="false" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web代码/你不知道的javascript(上)/第一部分-作用域和闭包/5作用域闭包/5.2 实质问题.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-172">
+          <caret line="11" column="15" lean-forward="false" selection-start-line="11" selection-start-column="15" selection-end-line="11" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web代码/你不知道的javascript(上)/第一部分-作用域和闭包/5作用域闭包/5.3 现在我懂了.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="17" column="55" lean-forward="false" selection-start-line="17" selection-start-column="55" selection-end-line="17" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web代码/你不知道的javascript(上)/第一部分-作用域和闭包/5作用域闭包/5.4 循环和闭包.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="720">
+          <caret line="20" column="22" lean-forward="false" selection-start-line="20" selection-start-column="22" selection-end-line="20" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web代码/你不知道的javascript(上)/第一部分-作用域和闭包/5作用域闭包/5.5 模块.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="828">
+          <caret line="23" column="16" lean-forward="true" selection-start-line="23" selection-start-column="16" selection-end-line="23" selection-end-column="16" />
           <folding />
         </state>
       </provider>
