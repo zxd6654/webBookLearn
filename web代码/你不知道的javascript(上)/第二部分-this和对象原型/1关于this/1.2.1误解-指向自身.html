@@ -25,8 +25,10 @@
     // foo: 8
     // foo: 9
     // foo 被调用了多少次？
-    console.log(foo.count); // 0 -- WT
+    console.log(foo.count); // 0 -- WTF?
 
+//    console.log 语句产生了 4 条输出，证明 foo(..) 确实被调用了 4 次，但是 foo.count 仍然
+//    是 0。显然从字面意思来理解 this 是错误的。
 
     /**解决方法一    使用 foo 标识符替代 this 来引用函数对象**/
 

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+如果你需要通过表达式来计算属性名，那么我们刚刚讲到的 myObject[..] 这种属性访问语
+法就可以派上用场了，如可以使用 myObject[prefix + name]。但是使用文字形式来声明对
+象时这样做是不行的
+
+<script>
+    var prefix = "foo";
+    var myObject = {
+        [prefix + "bar"]: "hello",
+        [prefix + "baz"]: "world"
+    };
+    myObject["foobar"]; // hello
+    myObject["foobaz"]; // world
+</script>
+</body>
+</html>
