@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+对象可以通过两种形式定义：声明形式和构造形式。
+
+对象是 JavaScript 的基础。在 JavaScript 中一共有六种主要类型（术语是“语言类型”）：
+string
+number
+boolean
+null
+undefined
+object
+
+注意，简单基本类型（string、boolean、number、null 和 undefined）本身并不是对象。
+null 有时会被当作一种对象类型，但是这其实只是语言本身的一个 bug，即对 null 执行
+typeof null 时会返回字符串 "object"。 实际上，null 本身是基本类型。
+有一种常见的错误说法是“JavaScript 中万物皆是对象”，这显然是错误的。
+
+内置对象
+• String
+• Number
+• Boolean
+• Object
+• Function
+• Array
+• Date
+• RegExp
+• Error
+
+<script>
+    var strPrimitive = "I am a string";
+    typeof strPrimitive; // "string"
+    strPrimitive instanceof String; // false
+    var strObject = new String("I am a string");
+    typeof strObject; // "object"
+    strObject instanceof String; // true
+    // 检查 sub-type 对象
+    Object.prototype.toString.call(strObject); // [object String]
+</script>
+</body>
+</html>
