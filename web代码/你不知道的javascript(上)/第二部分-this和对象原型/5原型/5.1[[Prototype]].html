@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+JavaScript 中的对象有一个特殊的 [[Prototype]] 内置属性，其实就是对于其他对象的引
+用。几乎所有的对象在创建时 [[Prototype]] 属性都会被赋予一个非空的值。
+
+<script>
+    var anotherObject = {
+        a: 2
+    };
+
+    //创建一个关联到 anotherObject 的对象
+    var myObject = Object.create(anotherObject);
+
+    for (var k in myObject) {
+        console.log('found:' + k);
+    }
+
+    // found: a
+    ("a" in myObject); // true
+</script>
+
+Object.prototype
+所有普通的 [[Prototype]] 链最终都会指向内置的 Object.prototype.
+
+属性设置和屏蔽
+<script>
+    var anotherObject = {
+        a: 2
+    };
+    var myObject = Object.create(anotherObject);
+
+    console.log(anotherObject.a); // 2
+
+    console.log(myObject.a); // 2anotherObject.hasOwnProperty( "a" ); // true
+
+    myObject.hasOwnProperty("a"); // false
+
+    myObject.a++; // 隐式屏蔽！
+
+    console.log(anotherObject.a); // 2
+
+    console.log(myObject.a); // 3
+
+    myObject.hasOwnProperty("a"); // true
+</script>
+</body>
+</html>
