@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        canvas {
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+<body>
+<canvas width="500" height="500" id="myCanvas"></canvas>
+操作变换矩阵
+a c e     x轴缩放 x轴倾斜 x轴平移
+b d f === y轴倾斜 y轴缩放 y轴平移
+0 0 1       0       0       1
+
+
+transform
+setTransform
+<script>
+    let canvas = document.getElementById('myCanvas');
+    let context = canvas.getContext('2d');
+
+//    context.transform(2, 0, 0, 2, 150, 150);
+//    context.fillRect(0, 0, 100, 100);
+
+    context.setTransform(1, 0, 0, 1, 0, 0);//单位矩阵
+    let xScale = Math.cos(0.7854);
+    let ySkew = -Math.sin(0.7854);
+    let xSkew = Math.sin(0.7854);
+    let yScale = Math.cos(0.7854);
+    let xTrans = 200;
+    let yTrans = 200;
+
+    context.transform(xScale,ySkew,xSkew,yScale,xTrans,yTrans);
+    context.fillRect(-50,50,100,100);
+
+</script>
+</body>
+</html>

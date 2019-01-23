@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        canvas {
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+<body>
+<canvas width="500" height="500" id="myCanvas"></canvas>
+
+全局阿尔法值
+globalAlpha
+
+合成操作
+globalCompositeOperation
+
+阴影
+shadowBlur shadowOffsetX shadowOffsetY shadowColor
+
+渐变
+
+<script>
+    let canvas = document.getElementById('myCanvas');
+    let context = canvas.getContext('2d');
+
+    //    context.fillStyle = 'rgb(63,169,245)';
+    //    context.fillRect(50, 50, 100, 100);
+    //    context.globalAlpha = 0.5;
+    //    context.fillStyle = 'rgb(255,123,172)';
+    //    context.fillRect(100, 100, 100, 100);
+
+    //    context.fillStyle = 'rgb(63,169,245)';
+    //    context.fillRect(50, 50, 100, 100);
+    //    context.globalCompositeOperation = 'source-over';
+    //    context.fillStyle = 'rgb(255,123,172)';
+    //    context.fillRect(100, 100, 100, 100);
+
+    context.shadowBlur = 20;
+    context.shadowOffsetX=10;
+    context.shadowOffsetY=10;
+    context.shadowColor = 'rgba(0,0,0,0.5)';
+    context.fillRect(50, 50, 100, 100);
+</script>
+</body>
+</html>
