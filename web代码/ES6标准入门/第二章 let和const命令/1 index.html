@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+1 不存在变量提升，此时是报错而不是undefined
+2 暂时性死区
+只要块级作用域内存在let命令，它所声明的变量就“绑定”（binding）这个区域，不再受外部的影响。
+
+3 不允许重复声明
+
+4块级作用域
+<script>
+    var tmp = new Date();
+
+    function f() {
+        console.log(tmp);
+        if (false) {
+            var tmp = 'hello world';
+        }
+    }
+
+    f();//undefined   原因在于变量提升，导致内层的tmp变量覆盖了外层的tmp变量。 此时块级作用域的出现就发挥了作用
+
+    console.log(tmp);//当地时间  异步-f()还没有执行完毕，
+
+    function f1() {
+        let n = 5;
+        if (true) {
+            let n = 10;
+        }
+        console.log(n);
+    }
+
+    f1();//5
+</script>
+</body>
+</html>

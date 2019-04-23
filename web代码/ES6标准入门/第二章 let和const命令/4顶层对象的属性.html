@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var a = 1;
+    // 如果在 Node 的 REPL 环境，可以写成 global.a
+    // 或者采用通用方法，写成 this.a
+    window.a // 1
+
+    let b = 1;
+    window.b // undefined
+</script>
+全局变量a由var命令声明，所以它是顶层对象的属性；全局变量b由let命令声明，所以它不是顶层对象的属性，返回undefined。
+</body>
+</html>
