@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+ES6 在Number对象上，新提供了Number.isFinite()和Number.isNaN()两个方法。
+Number.isFinite()用来检查一个数值是否为有限的（finite），即不是Infinity。
+Number.isNaN()用来检查一个值是否为NaN。
+<script>
+    Number.isFinite(15); // true
+    Number.isFinite(0.8); // true
+    Number.isFinite(NaN); // false
+    Number.isFinite(Infinity); // false
+    Number.isFinite(-Infinity); // false
+    Number.isFinite('foo'); // false
+    Number.isFinite('15'); // false
+    Number.isFinite(true); // false
+
+    Number.isNaN(NaN) // true
+    Number.isNaN(15) // false
+    Number.isNaN('15') // false
+    Number.isNaN(true) // false
+    Number.isNaN(9/NaN) // true
+    Number.isNaN('true' / 0) // true
+    Number.isNaN('true' / 'true') // true
+</script>
+</body>
+</html>
