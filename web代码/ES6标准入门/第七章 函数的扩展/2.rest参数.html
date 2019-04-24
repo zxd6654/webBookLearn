@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+ES6 引入 rest 参数（形式为...变量名），用于获取函数的多余参数，这样就不需要使用arguments对象了。
+rest 参数搭配的变量是一个数组，该变量将多余的参数放入数组中。
+reset参数之后不能再有其他的参数
+<script>
+    function add(...value) {
+        let sum = 0;
+
+        for (let val of value) {
+            sum += val;
+        }
+
+        return sum
+    }
+
+    add(2, 3, 5);//10
+
+
+    // arguments变量的写法
+    function sortNumbers() {
+        return Array.prototype.slice.call(arguments).sort();
+    }
+
+    // rest参数的写法
+    const sortNumbers = (...numbers) => numbers.sort();
+</script>
+</body>
+</html>

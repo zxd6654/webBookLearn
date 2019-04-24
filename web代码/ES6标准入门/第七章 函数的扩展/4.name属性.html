@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+函数的name属性，返回函数的函数名
+<script>
+    function foo() {
+    }
+
+    console.log(foo.name);//foo
+
+
+    var f = function () {
+    };
+
+    // ES5
+    f.name // ""
+
+    // ES6
+    f.name // "f"
+</script>
+</body>
+</html>

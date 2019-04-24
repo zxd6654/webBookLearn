@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+从es5开始，函数内部可以设定为严格模式
+<script>
+    // 报错
+    function doSomething(a, b = a) {
+        'use strict';
+        // code
+    }
+
+    // 函数执行的时候，先执行函数参数，然后再执行函数体。这样就有一个不合理的地方，只有从函数体之中，才能知道参数是否应该以严格模式执行，但是参数却应该先于函数体执行。
+</script>
+</body>
+</html>
