@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    JavaScript 的对象（Object），本质上是键值对的集合（Hash 结构），但是传统上只能用字符串当作键。这给它的使用带来了很大的限制。
+    Map 结构提供了“值—值”的对应，是一种更完善的 Hash 结构实现。如果你需要“键值对”的数据结构，Map 比 Object 更合适。
+</head>
+<body>
+<script>
+    const m = new Map();
+    const o = {p: 'Hello World'};
+
+    m.set(o, 'content');
+    m.get(o);// "content"
+
+    m.has(o); // true
+    m.delete(o); // true
+    m.has(o); // false
+
+
+    const map = new Map([
+        ['name', '张三'],
+        ['title', 'Author']
+    ]);
+
+    map.size // 2
+    map.has('name'); // true
+    map.get('name'); // "张三"
+    map.has('title'); // true
+    map.get('title') // "Author"
+</script>
+Map构造函数接受数组作为参数，实际上执行的是下面的算法。
+
+<script>
+    const items = [
+        ['name', '张三'],
+        ['title', 'Author']
+    ];
+
+    const map = new Map();
+
+    items.forEach(
+        ([key, value]) => map.set(key, value)
+    );
+</script>
+
+遍历方法
+
+keys()：返回键名的遍历器。
+values()：返回键值的遍历器。
+entries()：返回所有成员的遍历器。
+forEach()：遍历 Map 的所有成员。
+
+
+与其他数据结构的互相转换
+（1）Map 转为数组    [...myMap]
+（2）数组 转为 Map
+（3）Map 转为对象
+（4）对象转为 Map
+（5）Map 转为 JSON
+（6）JSON 转为 Map
+</body>
+</html>
