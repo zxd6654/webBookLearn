@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const fs = require('fs');
+
+        const readFile = function (fileName) {
+            return new Promise(function (resolve, reject) {
+                fs.readFile(fileName, function (error, data) {
+                    if (error) return reject(error);
+                    resolve(data);
+                });
+            });
+        };
+
+        const gen = function* () {
+            const f1 = yield readFile('/etc/fstab');
+            const f2 = yield readFile('/etc/shells');
+            console.log(f1.toString());
+            console.log(f2.toString());
+        };
+
+
+        //上面的代码写成async函数
+        const asyncReadFile = async function () {
+            const f1 = await readFile('/etc/fstab');
+            const f2 = await readFile('/etc/shells');
+            console.log(f1.toString());
+            console.log(f2.toString());
+        };
+    </script>
+</body>
+
+</html>
