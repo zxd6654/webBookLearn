@@ -1,31 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
+
 <body>
-ES5 的对象属性名都是字符串，这容易造成属性名的冲突。比如，你使用了一个他人提供的对象，
-但又想为这个对象添加新的方法（mixin 模式），新方法的名字就有可能与现有方法产生冲突。如果有一种机制，保证每个属性的名字都是独一无二的就好了，
-这样就从根本上防止属性名的冲突。这就是 ES6 引入Symbol的原因。
+    ES5 的对象属性名都是字符串，这容易造成属性名的冲突。比如，你使用了一个他人提供的对象，
+    但又想为这个对象添加新的方法（mixin 模式），新方法的名字就有可能与现有方法产生冲突。如果有一种机制，保证每个属性的名字都是独一无二的就好了，
+    这样就从根本上防止属性名的冲突。这就是 ES6 引入Symbol的原因。
 
-ES6 引入了一种新的原始数据类型Symbol，表示独一无二的值。它是 JavaScript 语言的第七种数据类型，
-前六种是：undefined、null、布尔值（Boolean）、字符串（String）、数值（Number）、对象（Object）。
+    ES6 引入了一种新的原始数据类型Symbol，表示独一无二的值。它是 JavaScript 语言的第七种数据类型，
+    前六种是：undefined、null、布尔值（Boolean）、字符串（String）、数值（Number）、对象（Object）。
 
-Symbol函数前不能使用new命令，否则会报错。
+    Symbol函数前不能使用new命令，否则会报错。
 
-Symbol函数可以接受一个字符串作为参数，表示对 Symbol 实例的描述，主要是为了在控制台显示，或者转为字符串时，比较容易区分。
-<script>
-    let s = Symbol();
+    是一种类似于字符串的数据类型
 
-    console.log(typeof s);//symbol
+    Symbol函数可以接受一个字符串作为参数，表示对 Symbol 实例的描述，主要是为了在控制台显示，或者转为字符串时，比较容易区分。
+    <script>
+        let s = Symbol();
 
-    const sym = Symbol('foo');
+        console.log(typeof s);//symbol
 
-    String(sym); // "Symbol(foo)"
-    sym.toString; // "Symbol(foo)"
+        const sym = Symbol('foo');
 
-    sym.description // "foo"
-</script>
+        String(sym); // "Symbol(foo)"
+        sym.toString; // "Symbol(foo)"
+
+        sym.description // "foo"
+    </script>
 </body>
+
 </html>

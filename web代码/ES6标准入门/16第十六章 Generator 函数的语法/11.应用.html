@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    （1）异步操作的同步化表达
+    <script>
+        function* loadUI() {
+            showLoadingScreen();
+            yield loadUIDataAsynchronously();
+            hideLoadingScreen();
+        }
+        var loader = loadUI();
+        // 加载UI
+        loader.next()
+
+        // 卸载UI
+        loader.next()
+
+
+
+
+        function* main() {
+            var result = yield request("http://some.url");
+            var resp = JSON.parse(result);
+            console.log(resp.value);
+        }
+
+        function request(url) {
+            makeAjaxCall(url, function (response) {
+                it.next(response);
+            });
+        }
+
+        var it = main();
+        it.next();
+
+    </script>
+
+    （2）控制流管理
+    <script>
+        function* longRunningTask(value1) {
+            try {
+                var value2 = yield step1(value1);
+                var value3 = yield step2(value2);
+                var value4 = yield step3(value3);
+                var value5 = yield step4(value4);
+                // Do something with value4
+            } catch (e) {
+                // Handle any error from step1 through step4
+            }
+        }
+
+        scheduler(longRunningTask(initialValue));
+
+        function scheduler(task) {
+            var taskObj = task.next(task.value);
+            // 如果Generator函数未结束，就继续调用
+            if (!taskObj.done) {
+                task.value = taskObj.value
+                scheduler(task);
+            }
+        }
+    </script>
+    <script>
+        let steps = [step1Func, step2Func, step3Func];
+
+        function* iterateSteps(steps) {
+            for (var i = 0; i < steps.length; i++) {
+                var step = steps[i];
+                yield step();
+            }
+        }
+
+
+        let jobs = [job1, job2, job3];
+
+        function* iterateJobs(jobs) {
+            for (var i = 0; i < jobs.length; i++) {
+                var job = jobs[i];
+                yield* iterateSteps(job.steps);
+            }
+        }
+
+        for (var step of iterateJobs(jobs)) {
+            console.log(step.id);
+        }
+    </script>
+</body>
+
+</html>

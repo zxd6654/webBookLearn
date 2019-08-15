@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    then:
+    是定义在原型对象Promise.prototype上的。它的作用是为 Promise
+    实例添加状态改变时的回调函数。前面说过，then方法的第一个参数是resolved状态的回调函数，第二个参数（可选）是rejected状态的回调函数。
+    可以采用链式写法，即then方法后面再调用另一个then方法。
+
+    catch:
+    用于指定发生错误时的回调函数。
+
+    finally:
+    finally方法用于指定不管 Promise 对象最后状态如何，都会执行的操作。
+
+    Promise.all():
+    方法用于将多个 Promise 实例，包装成一个新的 Promise 实例。
+
+    Promise.race()
+    Promise.race方法同样是将多个 Promise 实例，包装成一个新的 Promise 实例。
+
+    Promise.resolve()
+    有时需要将现有对象转为 Promise 对象，Promise.resolve方法就起到这个作用。
+
+    Promise.reject()
+    方法也会返回一个新的 Promise 实例，该实例的状态为rejected。
+
+    Promise.try()
+    实际开发中，经常遇到一种情况：不知道或者不想区分，函数f是同步函数还是异步操作，但是想用 Promise 来处理它。因为这样就可以不管f是否包含异步操作，都用then方法指定下一步流程，用catch方法处理f抛出的错误。
+    <script>
+        // Generator 函数与 Promise 的结合
+        function getFoo() {
+            return new Promise(function (resolve, reject) {
+                resolve('foo');
+            });
+        }
+
+        const g = function* () {
+            try {
+                const foo = yield getFoo();
+                console.log(foo);
+            } catch (e) {
+                console.log(e);
+            }
+        };
+
+        function run(generator) {
+            const it = generator();
+
+            function go(result) {
+                if (result.done) return result.value;
+
+                return result.value.then(function (value) {
+                    return go(it.next(value));
+                }, function (error) {
+                    return go(it.throw(error));
+                });
+            }
+
+            go(it.next());
+        }
+
+        run(g);
+    </script>
+
+    <script>
+        const f = () => console.log('now');
+        Promise.try(f);
+        console.log('next');
+    </script>
+</body>
+
+</html>

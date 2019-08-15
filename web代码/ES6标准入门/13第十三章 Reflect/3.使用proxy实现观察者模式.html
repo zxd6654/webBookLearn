@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    观察者模式 指的是函数自动观察数据对象,一旦对象有变化,函数就会自动执行
+
+    实例:
+    <script>
+        const queuedObservers = new Set();
+
+        const observe = fn => queuedObservers.add(fn);
+        const observable = obj => new Proxy(obj, { set });
+
+        function set(target, key, value, receiver) {
+            const result = Reflect.set(target, key, value, receiver);
+            queuedObservers.forEach(observer => observer());
+            return result;
+        }
+    </script>
+</body>
+
+</html>

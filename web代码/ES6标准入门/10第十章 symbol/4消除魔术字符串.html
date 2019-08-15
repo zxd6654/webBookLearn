@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+魔术字符串指的是,在代码中多次出现,与代码形成强耦合的某一个具体的字符串或者数值
+
+<body>
+    <script>
+        function getArea(shape, options) {
+            let area = 0;
+
+            switch (shape) {
+                case 'Triangle': // 魔术字符串
+                    area = .5 * options.width * options.height;
+                    break;
+                /* ... more code ... */
+            }
+
+            return area;
+        }
+
+        getArea('Triangle', { width: 100, height: 100 }); // 魔术字符串
+    </script>
+    这里的Triangle出现多次,形成了强耦合
+    <script>
+        const shapeType = {
+            triangle: 'Triangle'
+        };
+
+        function getArea(shape, options) {
+            let area = 0;
+            switch (shape) {
+                case shapeType.triangle:
+                    area = .5 * options.width * options.height;
+                    break;
+            }
+            return area;
+        }
+
+        getArea(shapeType.triangle, { width: 100, height: 100 });
+    </script>
+    也可以采用symbol类型
+    <script>
+        const shapeType = {
+            triangle: Symbol()
+        };
+
+        function getArea(shape, options) {
+            let area = 0;
+            switch (shape) {
+                case shapeType.triangle:
+                    area = .5 * options.width * options.height;
+                    break;
+            }
+            return area;
+        }
+
+        getArea(shapeType.triangle, { width: 100, height: 100 });
+    </script>
+</body>
+
+</html>

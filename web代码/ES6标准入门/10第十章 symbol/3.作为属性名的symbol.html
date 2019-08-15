@@ -1,30 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
+
 <body>
-由于每个symbol值都不相等的，这意味着symbol值可以作为标识符，用于对象的属性名，
-就能保证不会出现同名的属性。
-<script>
-    let mySymbol = Symbol();
+    由于每个symbol值都不相等的，这意味着symbol值可以作为标识符，用于对象的属性名，
+    就能保证不会出现同名的属性。
 
-    // 第一种写法
-    let a = {};
-    a[mySymbol] = 'Hello!';
+    使用symbol定义属性时,symbol值必须放在放过好之中.
+    <script>
+        let mySymbol = Symbol();
 
-    // 第二种写法
-    let a = {
-        [mySymbol]: 'Hello!'
-    };
+        // 第一种写法
+        let a = {};
+        a[mySymbol] = 'Hello!';
 
-    // 第三种写法
-    let a = {};
-    Object.defineProperty(a, mySymbol, { value: 'Hello!' });
+        // 第二种写法
+        let a = {
+            [mySymbol]: 'Hello!'
+        };
 
-    // 以上写法都得到同样结果
-    a[mySymbol] // "Hello!"
-</script>
+        // 第三种写法
+        let a = {};
+        Object.defineProperty(a, mySymbol, { value: 'Hello!' });
+
+        // 以上写法都得到同样结果
+        a[mySymbol] // "Hello!"
+    </script>
 </body>
+
 </html>

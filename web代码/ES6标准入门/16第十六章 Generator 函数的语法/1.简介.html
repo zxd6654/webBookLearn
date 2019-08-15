@@ -1,35 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
+
 <body>
-生成器
-Generator 函数是 ES6 提供的一种异步编程解决方案，语法行为与传统函数完全不同。
+    生成器
+    Generator 函数是 ES6 提供的一种异步编程解决方案，语法行为与传统函数完全不同。
 
-Generator 函数是一个普通函数，但是有两个特征。一是，function关键字与函数名之间有一个星号；二是，函数体内部使用yield表达式，定义不同的内部状态（yield在英语里的意思就是“产出”）。
+    Generator 函数是一个普通函数，但是有两个特征。一是，function关键字与函数名之间有一个星号；二是，函数体内部使用yield表达式，定义不同的内部状态（yield在英语里的意思就是“产出”）。
 
-Generator 函数是分段执行的，yield表达式是暂停执行的标记，而next方法可以恢复执行。
+    Generator 函数是分段执行的，yield表达式是暂停执行的标记，而next方法可以恢复执行。
 
-都可以：
-function * foo(x, y) { ··· }
-function *foo(x, y) { ··· }
-function* foo(x, y) { ··· }
-function*foo(x, y) { ··· }
-<script>
-    function* hello() {
-        yield 'hello';
-        yield 'world';
-        return 'ending';
-    }
+    都可以：
+    function * foo(x, y) { ··· }
+    function *foo(x, y) { ··· }
+    function* foo(x, y) { ··· }
+    function*foo(x, y) { ··· }
 
-    let hw = hello();
+    <script>
+        function* hello() {
+            yield 'hello';
+            yield 'world';
+            return 'ending';
+        }
 
-    console.log(hw.next());
-    console.log(hw.next());
-    console.log(hw.next());
-    console.log(hw.next());
-</script>
+        let hw = hello();
+
+        console.log(hw.next());
+        console.log(hw.next());
+        console.log(hw.next());
+        console.log(hw.next());
+    </script>
+
+    for...of循环
+    <script>
+        function* foo() {
+            yield 0;
+            yield 1;
+            yield 2;
+            yield 3;
+            yield 4;
+            yield 5;
+            yield 6;
+        }
+
+        for (let v of foo()) {
+            console.log(v);
+        }
+    </script>
+
+    Generator.prototype.throw()
+    Generator 函数返回的遍历器对象，都有一个throw方法，可以在函数体外抛出错误，然后在 Generator 函数体内捕获。
+    <script>
+        var g = function* () {
+            try {
+                yield;
+            } catch (e) {
+                console.log('内部捕获', e);
+            }
+        };
+
+        var i = g();
+        i.next();
+
+        try {
+            i.throw('a');
+            i.throw('b');
+        } catch (e) {
+            console.log('外部捕获', e);
+        }
+// 内部捕获 a
+// 外部捕获 b
+    </script>
+
+    Generator.prototype.return()
+    可以返回给定的值，并且终结遍历 Generator 函数。
+
+    yield* 表达式
+    如果在 Generator 函数内部，调用另一个 Generator 函数。需要在前者的函数体内部，自己手动完成遍历。
+    <script>
+        function* foo() {
+            yield 'a';
+            yield 'b';
+        }
+        function* bar() {
+            yield 'x';
+            yield* foo();
+            yield 'y';
+        }
+        for (let v of bar()) {
+            console.log(v);
+        }
+    </script>
+
+    作为对象属性的 Generator 函数
+    <script>
+        let obj = {
+            * myGeneratorMethod() {
+
+            },
+            myGenerator: function* () {
+
+            }
+        };
+    </script>
 </body>
+
 </html>
