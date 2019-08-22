@@ -1,0 +1,34 @@
+﻿编程语言按照数据类型大体可以分为两类，一类是静态类型语言，另一类是动态类型语言。
+静态类型语言在编译时便已确定变量的类型，而动态类型语言的变量类型要到程序运行的时候，待变量被赋予某个值之后，才会具有某种类型。
+
+例子：
+从前在 JavaScript 王国里，有一个国王，他觉得世界上最美妙的声音就是鸭子的叫
+声，于是国王召集大臣，要组建一个 1000 只鸭子组成的合唱团。大臣们找遍了全国，
+终于找到 999 只鸭子，但是始终还差一只，最后大臣发现有一只非常特别的鸡，它的叫
+声跟鸭子一模一样，于是这只鸡就成为了合唱团的最后一员。
+<script type="text/javascript">
+    var duck = {
+        duckSinging: function () {
+            console.log('嘎嘎嘎');
+        }
+    };
+
+    var chicken = {
+        duckSinging: function () {
+            console.log('嘎嘎嘎');
+        }
+    };
+
+    var choir = []; // 合唱团
+    var joinChoir = function (animal) {
+        if (animal && typeof animal.duckSinging === 'function') {
+            choir.push(animal);
+            console.log('恭喜加入合唱团');
+            console.log('合唱团已有成员数量:' + choir.length);
+        }
+    };
+
+    joinChoir(duck); // 恭喜加入合唱团
+    joinChoir(chicken); // 恭喜加入合唱团
+
+</script>

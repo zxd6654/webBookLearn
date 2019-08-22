@@ -1,0 +1,30 @@
+﻿<script>
+    //    首先我们把不变的部分隔离出来，那就是所有的动物都会发出叫声：
+    var makeSound = function (animal) {
+        animal.sound()
+    };
+    //然后把可变的部分各自封装起来，我们刚才谈到的多态性实际上指的是对象的多态性：
+    var Duck = function () {
+    };
+    Duck.prototype.sound = function () {
+        console.log('咯咯咯');
+    };
+
+    var Chicken = function () {
+    };
+    Chicken.prototype.sound = function () {
+        console.log('咯咯咯');
+    };
+
+    makeSound(new Duck()); // 嘎嘎嘎
+    makeSound(new Chicken()); // 咯咯咯
+
+    //    如果有一天动物世界里又增加了一只狗这时候只要简单地追加一些代码就可以了，而不用改动以前的makeSound 函数
+
+    var Dog = function () {
+    };
+    Dog.prototype.sound = function () {
+        console.log('汪汪汪');
+    };
+    makeSound(new Dog()); // 汪汪汪
+</script>
