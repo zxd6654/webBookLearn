@@ -1,14 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
-<body>
-ES5 中引入了“严格模式”。同正常模式，或者说宽松 / 懒惰模式相比，严格模式在行为上
-有很多不同。其中一个不同的行为是严格模式禁止自动或隐式地创建全局变量
 
-ReferenceError 同作用域判别失败相关，
-TypeError 则代表作用域判别成功了，但是对结果的操作是非法或不合理的。
+<body>
+    ES5 中引入了“严格模式”。同正常模式，或者说宽松 / 懒惰模式相比，严格模式在行为上
+    有很多不同。其中一个不同的行为是严格模式禁止自动或隐式地创建全局变量
+
+    ReferenceError 同作用域判别失败相关，
+    TypeError 则代表作用域判别成功了，但是对结果的操作是非法或不合理的。
+
+    <script>
+        function foo(a) {
+            console.log(a + b);  //这里的b进行的RHS查询,但是在作用域中没有找到,变量b 抛出错误referenceError
+            b = a;//这里的b进行的是LHS查询,虽然在顶层中没有找到,如果不是严格模式的话,就会在顶层创建一个变量b
+        }
+
+        foo(2);
+    </script>
 </body>
+
 </html>
