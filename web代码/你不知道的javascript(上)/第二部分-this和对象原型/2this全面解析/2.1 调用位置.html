@@ -1,35 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
+
 <body>
-在理解this的绑定过程之前，首先要理解调用位置：
-调用位置就是函数在代码中被调用的位置（而不是声明的位置）。
+    在理解this的绑定过程之前，首先要理解调用位置：
+    调用位置就是函数在代码中被调用的位置（而不是声明的位置）。
 
-<script>
-    function baz() {
-        // 当前调用栈是：baz
-        // 因此，当前调用位置是全局作用域
-        console.log('baz');
-        bar();
-    }
+    为了找出调用位置 最重要的是要分析调用栈
+    <script>
+        function baz() {
+            // 当前调用栈是：baz
+            // 因此，当前调用位置是全局作用域
+            console.log('baz');
+            bar();
+        }
 
-    function bar() {
-        // 当前调用栈是 baz -> bar
-        // 因此，当前调用位置在 baz 中
-        console.log("bar");
-        foo(); // <-- foo 的调用位置
-    }
+        function bar() {
+            // 当前调用栈是 baz -> bar
+            // 因此，当前调用位置在 baz 中
+            console.log("bar");
+            foo(); // <-- foo 的调用位置
+        }
 
-    function foo() {
-        // 当前调用栈是 baz -> bar -> foo
-        // 因此，当前调用位置在 bar 中
-        console.log("foo");
-    }
+        function foo() {
+            // 当前调用栈是 baz -> bar -> foo
+            // 因此，当前调用位置在 bar 中
+            console.log("foo");
+        }
 
-    baz(); // <-- baz 的调用位置
-</script>
+        baz(); // <-- baz 的调用位置
+    </script>
 </body>
+
 </html>
