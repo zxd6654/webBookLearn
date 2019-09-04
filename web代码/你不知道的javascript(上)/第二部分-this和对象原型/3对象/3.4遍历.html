@@ -1,22 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
+
 <body>
-for..in 循环可以用来遍历对象的可枚举属性列表
+    for..in 循环可以用来遍历对象的可枚举属性列表
 
-那么如何直接遍历值而不是数组下标（或者对象属性）呢？幸好，ES6 增加了一种用来遍
-历数组的 for..of 循环语法（如果对象本身定义了迭代器的话也可以遍历对象）：
+    那么如何直接遍历值而不是数组下标（或者对象属性）呢？幸好，ES6 增加了一种用来遍
+    历数组的 for..of 循环语法（如果对象本身定义了迭代器的话也可以遍历对象）：
 
-<script>
-    var myArray = [ 1, 2, 3 ];
-    var it = myArray[Symbol.iterator]();
-    console.log(it.next()); // { value:1, done:false }
-    console.log(it.next()); // { value:2, done:false }
-    console.log(it.next()); // { value:3, done:false }
-    console.log(it.next()); // { done:true }
-</script>
+    <script>
+        var myArray = [1, 2, 3];
+        var it = myArray[Symbol.iterator]();
+        console.log(it.next()); // { value:1, done:false }
+        console.log(it.next()); // { value:2, done:false }
+        console.log(it.next()); // { value:3, done:false }
+        console.log(it.next()); // { done:true }
+    </script>
 </body>
+
 </html>

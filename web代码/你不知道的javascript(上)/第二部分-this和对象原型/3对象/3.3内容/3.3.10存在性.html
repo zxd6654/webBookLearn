@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    in 操作符会检查属性是否在对象及其 [[Prototype]] 原型链中（参见第 5 章）。相比之下，
+    hasOwnProperty(..) 只会检查属性是否在 myObject 对象中，不会检查 [[Prototype]] 链。
+
+    看起来 in 操作符可以检查容器内是否有某个值，但是它实际上检查的是某
+    个属性名是否存在。对于数组来说这个区别非常重要，4 in [2, 4, 6] 的结
+    果并不是你期待的 True，因为 [2, 4, 6] 这个数组中包含的属性名是 0、1、
+    2，没有 4。
+
+    在数组上应用 for..in 循环有时会产生出人意料的结果，因为这种枚举不
+    仅会包含所有数值索引，还会包含所有可枚举属性。最好只在对象上应用
+    for..in 循环，如果要遍历数组就使用传统的 for 循环来遍历数值索引。
+    <script>
+        var myObject = {
+            a: 2
+        }
+
+            ('a' in myObject);//true   in操作符
+        ('b' in myObject);//false
+
+        myObject.hasOwnProperty('a');//true
+        myObject.hasOwnProperty('b');//false
+
+        Object.prototype.hasOwnProperty.call(myObject, 'a')//true
+    </script>
+</body>
+
+</html>

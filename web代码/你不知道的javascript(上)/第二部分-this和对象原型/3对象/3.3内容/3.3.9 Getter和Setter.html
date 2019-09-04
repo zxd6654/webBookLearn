@@ -1,10 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
-<body>
 
+<body>
+    _a_只是一种惯例,没有任何特殊行为
+    <script>
+        var myObject = {
+            get a() {
+                return this._a_;
+            },
+
+            set a(val) {
+                this._a_ = val;
+            }
+        }
+
+        myObject.a = 2;
+
+        alert(myObject.a)
+    </script>
 </body>
+
 </html>
