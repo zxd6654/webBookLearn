@@ -1,18 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
-<body>
-所有的函数默认都会拥有一个
-名为 prototype 的公有并且不可枚举（参见第 3 章）的属性，它会指向另一个对象：
 
-<script>
-    function Foo() {
-// ...
-    }
-    Foo.prototype; // {}  这个对象通常被称为 Foo 的原型，因为我们通过名为 Foo.prototype 的属性引用来访问它
-</script>
+<body>
+    JavaScript 和面向类的语言不同，它并没有类来作为对象的抽象模式
+    或者说蓝图。JavaScript 中只有对象。
+
+    所有的函数默认都会拥有一个
+    名为 prototype 的公有并且不可枚举（参见第 3 章）的属性，它会指向另一个对象：
+
+    <script>
+        function Foo() {
+            // ...
+        }
+        Foo.prototype; // {}  这个对象通常被称为 Foo 的原型，因为我们通过名为 Foo.prototype 的属性引用来访问它
+    </script>
 </body>
+
 </html>
