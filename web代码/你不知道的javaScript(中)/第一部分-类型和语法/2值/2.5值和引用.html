@@ -9,7 +9,18 @@
 </head>
 
 <body>
-
+    <script>
+        var a = 2;
+        var b = a; // b是a的值的一个副本
+        b++;
+        a; // 2
+        b; // 3
+        var c = [1, 2, 3];
+        var d = c; // d是[1,2,3]的一个引用
+        d.push(4);
+        c; // [1,2,3,4]
+        d; // [1,2,3,4]
+    </script>
 </body>
 
 </html>
