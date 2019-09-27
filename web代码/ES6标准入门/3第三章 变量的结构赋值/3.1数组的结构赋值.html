@@ -1,12 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
+
 <body>
-<script>
-    let [a, b, c] = [1, 2, 3];
-</script>
+    es6允许按照一定模式,从数组和对象中提取值,对变量赋值,这被称为解构
+    <script>
+        let [a, b, c] = [1, 2, 3];
+        console.log(a)
+
+        let [head, ...tail] = [1, 2, 3, 4];
+        console.log(head) //1
+        console.log(tail) // [2, 3, 4]
+    </script>
+
+    对于Set结构,也可以使用数组的解构赋值
+    <script>
+        let [x, y, z] = new Set([1, 2, 3]);
+
+        console.log(x)
+    </script>
+
+    结构赋值允许指定默认值
+    注意es6内部使用严格相等运算符(===),判断一个位置是否有值
+    所以，只有当一个数组成员严格等于undefined，默认值才会生效。
+    <script>
+        let [foo = true] = [];
+        let [x, y = 'b'] = ['a', undefined]; // x='a', y='b'
+
+        let [x = 1] = [null]; //x= null
+    </script>
+
+    默认值是一个表达式，那么这个表达式是惰性求值的，即只有在用到的时候，才会求值。
+    <script>
+        function f() {
+            console.log('aaa');
+        }
+
+        let [x = f()] = [1];
+    </script>
+
+    默认值可以引用解构赋值的其他变量，但该变量必须已经声明。
+    <script>
+        let [x = 1, y = x] = []; // x=1; y=1
+        let [x = 1, y = x] = [2]; // x=2; y=2
+        let [x = 1, y = x] = [1, 2]; // x=1; y=2
+        let [x = y, y = 1] = []; // ReferenceError: y is not defined
+    </script>
 </body>
+
 </html>
