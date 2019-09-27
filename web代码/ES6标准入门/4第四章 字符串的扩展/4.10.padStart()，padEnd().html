@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+    ES2017 引入了字符串补全长度的功能。如果某个字符串不够指定长度，会在头部或尾部补全。padStart()用于头部补全，padEnd()用于尾部补全。
+
+    第一个参数是字符串补全生效的最大长度，第二个参数是用来补全的字符串。
+    <script>
+        'x'.padStart(5, 'ab') // 'ababx'
+        'x'.padStart(4, 'ab') // 'abax'
+
+        'x'.padEnd(5, 'ab') // 'xabab'
+        'x'.padEnd(4, 'ab') // 'xaba'
+
+        // 如果原字符串的长度，等于或大于最大长度，则字符串补全不生效，返回原字符串。
+        'xxx'.padStart(2, 'ab') // 'xxx'
+        'xxx'.padEnd(2, 'ab') // 'xxx'
+    </script>
+</body>
+
+</html>
