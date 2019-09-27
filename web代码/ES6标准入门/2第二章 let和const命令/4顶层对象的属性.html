@@ -1,19 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
-<body>
-<script>
-    var a = 1;
-    // 如果在 Node 的 REPL 环境，可以写成 global.a
-    // 或者采用通用方法，写成 this.a
-    window.a // 1
 
-    let b = 1;
-    window.b // undefined
-</script>
-全局变量a由var命令声明，所以它是顶层对象的属性；全局变量b由let命令声明，所以它不是顶层对象的属性，返回undefined。
+<body>
+    ES6 为了改变这一点，一方面规定，为了保持兼容性，var命令和function命令声明的全局变量，依旧是顶层对象的属性；
+    另一方面规定，let命令、const命令、class命令声明的全局变量，不属于顶层对象的属性。也就是说，从 ES6
+    开始，全局变量将逐步与顶层对象的属性脱钩。
+    <script>
+        var a = 1;
+        // 如果在 Node 的 REPL 环境，可以写成 global.a
+        // 或者采用通用方法，写成 this.a
+        window.a // 1
+
+        let b = 1;
+        window.b // undefined
+    </script>
 </body>
+
 </html>
