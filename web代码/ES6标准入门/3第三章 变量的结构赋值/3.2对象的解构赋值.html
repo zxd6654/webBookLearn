@@ -1,14 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
+
 <body>
-<script>
-    let { foo, bar } = { foo: 'aaa', bar: 'bbb' };
-    foo // "aaa"
-    bar // "bbb"
-</script>
+    对象的属性没有次序,变量必须与属性名同名,才能取到正确的值
+    <script>
+        let {
+            foo,
+            bar
+        } = {
+            foo: 'aaa',
+            bar: 'bbb'
+        };
+        foo // "aaa"
+        bar // "bbb"
+    </script>
+
+    对象的解构赋值,可以很方便的将现有对象的方法,赋值到某个变量
+    <script>
+        // 例一
+        let {
+            log,
+            sin,
+            cos
+        } = Math;
+
+        // 例二
+        const {
+            log
+        } = console;
+        log('hello') // hello
+    </script>
+
+    对象的解构也可以指定默认值。
+    <script>
+        var {
+            x,
+            y = 5
+        } = {
+            x: 1
+        };
+        x // 1
+        y // 5
+
+        var {
+            x = 3
+        } = {
+            x: undefined
+        };
+        x // 3
+
+        var {
+            x = 3
+        } = {
+            x: null
+        };
+        x // null
+    </script>
 </body>
+
 </html>
