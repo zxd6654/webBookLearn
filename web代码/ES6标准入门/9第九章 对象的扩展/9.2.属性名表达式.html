@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+    JavaScript 定义对象的属性，有两种方法。
+    <script>
+        // 方法一
+        obj.foo = true;
+
+        // 方法二
+        obj['a' + 'bc'] = 123;
+
+
+        let lastWord = 'last word';
+
+        const a = {
+            'first word': 'hello',
+            [lastWord]: 'world'
+        };
+
+        a['first word'] // "hello"
+        a[lastWord] // "world"
+        a['last word'] // "world"
+
+
+        let obj = {
+            ['h' + 'ello']() {
+                return 'hi';
+            }
+        };
+
+        obj.hello() // hi
+    </script>
+</body>
+
+</html>
