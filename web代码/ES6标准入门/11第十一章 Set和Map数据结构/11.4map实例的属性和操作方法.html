@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    Map结构的实例有以下属性和操作方法
+
+    1 size 属性
+    size属性返回Map结构的成员总数
+
+    2 Map.prototype.set(key, value)
+    set方法设置键名key对应的键值为value，然后返回整个 Map 结构。
+
+    3 Map.prototype.get(key)
+    get方法读取key对应的键值，如果找不到key，返回undefined。
+
+    4 Map.prototype.has(key)
+    has方法返回一个布尔值，表示某个键是否在当前 Map 对象之中。
+
+    5 Map.prototype.delete(key)
+    delete方法删除某个键，返回true。如果删除失败，返回false。
+
+    6 Map.prototype.clear()
+    clear方法清除所有成员，没有返回值。
+
+
+    遍历方法
+
+    Map.prototype.keys()：返回键名的遍历器。
+    Map.prototype.values()：返回键值的遍历器。
+    Map.prototype.entries()：返回所有成员的遍历器。
+    Map.prototype.forEach()：遍历 Map 的所有成员。
+    <script>
+        const map = new Map([
+            ['F', 'no'],
+            ['T', 'yes'],
+        ]);
+
+        for (let key of map.keys()) {
+            console.log(key);
+        }
+        // "F"
+        // "T"
+
+        for (let value of map.values()) {
+            console.log(value);
+        }
+        // "no"
+        // "yes"
+
+        for (let item of map.entries()) {
+            console.log(item[0], item[1]);
+        }
+        // "F" "no"
+        // "T" "yes"
+
+        // 或者
+        for (let [key, value] of map.entries()) {
+            console.log(key, value);
+        }
+        // "F" "no"
+        // "T" "yes"
+
+        // 等同于使用map.entries()
+        for (let [key, value] of map) {
+            console.log(key, value);
+        }
+        // "F" "no"
+        // "T" "yes"
+
+        map.forEach(function (value, key, map) {
+            console.log("Key: %s, Value: %s", key, value);
+        });
+    </script>
+
+    Map 结构转为数组结构，比较快速的方法是使用扩展运算符（...）。
+    <script>
+        const map = new Map([
+            [1, 'one'],
+            [2, 'two'],
+            [3, 'three'],
+        ]);
+
+        [...map.keys()];
+        // [1, 2, 3]
+
+        [...map.values()];
+        // ['one', 'two', 'three']
+
+        [...map.entries()];
+        // [[1,'one'], [2, 'two'], [3, 'three']]
+
+        [...map];
+        // [[1,'one'], [2, 'two'], [3, 'three']]
+    </script>
+</body>
+
+</html>

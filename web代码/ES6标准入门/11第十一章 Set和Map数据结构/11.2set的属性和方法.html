@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    Set 实例的属性和方法
+    Set 结构的实例有以下属性。
+
+    Set.prototype.constructor：构造函数，默认就是Set函数。
+    Set.prototype.size：返回Set实例的成员总数。
+    Set 实例的方法分为两大类：操作方法（用于操作数据）和遍历方法（用于遍历成员）。下面先介绍四个操作方法。
+
+    操作方法:
+    add(value)：添加某个值，返回 Set 结构本身。
+    delete(value)：删除某个值，返回一个布尔值，表示删除是否成功。
+    has(value)：返回一个布尔值，表示该值是否为Set的成员。
+    clear()：清除所有成员，没有返回值。
+
+    遍历操作:
+    Set 结构的实例有四个遍历方法，可以用于遍历成员。
+
+    keys()：返回键名的遍历器
+    values()：返回键值的遍历器
+    entries()：返回键值对的遍历器
+    forEach()：使用回调函数遍历每个成员
+    需要特别指出的是，Set的遍历顺序就是插入顺序。这个特性有时非常有用，比如使用 Set 保存一个回调函数列表，调用时就能保证按照添加顺序调用。
+</head>
+
+<body>
+    <script>
+        s = new Set();
+        s.add(1).add(2).add(2);
+        // 注意2被加入了两次
+        console.log(s);
+        s.size // 2     如果是加入的函数，加入相同的函数，就不会去重
+
+        s.has(1) // true
+        s.has(2) // true
+        s.has(3) // false
+
+        s.delete(2);
+        s.has(2) // false
+    </script>
+    <!--（1）keys()，values()，entries()-->
+
+    <script>
+        let set = new Set(['red', 'green', 'blue']);
+
+        for (let item of set.keys()) {
+            console.log(item);
+        }
+        // red
+        // green
+        // blue
+
+        for (let item of set.values()) {
+            console.log(item);
+        }
+        // red
+        // green
+        // blue
+
+        //Set 结构的实例默认可遍历
+        for (let x of set) {
+            console.log(x);
+        }
+        // red
+        // green
+        // blue
+
+        for (let item of set.entries()) {
+            console.log(item);
+        }
+        // ["red", "red"]
+        // ["green", "green"]
+        // ["blue", "blue"]
+    </script>
+    <!--（2）forEach()-->
+
+    <script>
+        set = new Set([1, 4, 9]);
+        set.forEach((value, key) => console.log(key + ' : ' + value))
+        // 1 : 1
+        // 4 : 4
+        // 9 : 9
+    </script>
+
+    使用Set可以很容易的实现数据的并集,交集和差集
+    <script>
+        let a = new Set([1, 2, 3]);
+        let b = new Set([4, 3, 2]);
+
+        //并集
+        let union = new Set([...a, ...b]);
+        console.log([...union]);
+
+        //交集
+        let intersect = new Set([...a].filter(x => b.has(x)));
+        console.log([...intersect]);
+
+        //差集
+        let difference = new Set([...a].filter(x => !b.has(x)));
+        console.log([...difference]);
+    </script>
+</body>
+
+</html>

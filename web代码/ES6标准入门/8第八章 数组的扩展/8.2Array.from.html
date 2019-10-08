@@ -1,32 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
+
 <body>
-Array.from方法用于将两类对象转为真正的数组：类似数组的对象（array-like object）
-和可遍历（iterable）的对象（包括 ES6 新增的数据结构 Set 和 Map）。
+    Array.from方法用于将两类对象转为真正的数组：类似数组的对象（array-like object）
+    和可遍历（iterable）的对象（包括 ES6 新增的数据结构 Set 和 Map）。
 
-<script>
-    let arrayLike = {
-        '0': 'a',
-        '1': 'b',
-        '2': 'c',
-        length: 3
-    };
+    <script>
+        let arrayLike = {
+            '0': 'a',
+            '1': 'b',
+            '2': 'c',
+            length: 3
+        };
 
-    // ES5的写法
+        // ES5的写法
 
-    var arr1 = [].slice.call(arrayLike); // ['a', 'b', 'c']
-    // var arr1 = Array.prototype.slice.call(arrayLike); // ['a', 'b', 'c']
+        var arr1 = [].slice.call(arrayLike); // ['a', 'b', 'c']
+        // var arr1 = Array.prototype.slice.call(arrayLike); // ['a', 'b', 'c']
 
-    // ES6的写法
-    let arr2 = Array.from(arrayLike); // ['a', 'b', 'c']
+        // ES6的写法
+        let arr2 = Array.from(arrayLike); // ['a', 'b', 'c']
 
-    'hello'.split(',');
-    Array.from('hello')
-    // ['h', 'e', 'l', 'l', 'o']
-</script>
+        'hello'.split(',');
+        Array.from('hello')
+        // ['h', 'e', 'l', 'l', 'o']
+    </script>
+
+    Array.from()可以将各种值转为真正的数组,并且还提供map功能.
+    这实际上意味着，只要有一个原始的数据结构，你就可以先对它的值进行处理，
+    然后转成规范的数组结构，进而就可以使用数量众多的数组方法。
+    <script>
+        Array.from({
+            length: 3
+        });
+        // [ undefined, undefined, undefined ]
+
+        Array.from({
+            length: 2,
+        }, () => 'zxd');
+        //['zxd', 'zxd']
+    </script>
 </body>
+
 </html>
