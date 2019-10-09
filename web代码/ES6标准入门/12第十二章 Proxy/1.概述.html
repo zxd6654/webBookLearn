@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+    代理器
+    Proxy用于修改某些操作的默认行为，等同于在语言层面作出修改，所以属于一种‘元编程’，即对编程语言进行编程
+    <script>
+        //对空对象的set和get进行了拦截
+        let obj = new Proxy({}, {
+            get(target, p, receiver) {
+                console.log(`getting ${target, p}`);
+                return Reflect.get(target, p, receiver);
+            },
+            set(target, p, value, receiver) {
+                console.log(`setting ${target, p, value}`);
+                return Reflect.set(target, p, value, receiver);
+            }
+        });
+
+        obj.count = 1;
+
+        ++obj.count;
+
+        //Proxy 实际上重载（overload）了点运算符，即用自己的定义覆盖了语言的原始定义。
+    </script>
+    ES6 原生提供 Proxy 构造函数，用来生成 Proxy 实例。
+    target参数表示所要拦截的目标对象
+    handler参数也是一个对象，用来定制拦截行为。
+
+    注意,要使得Proxy起作用,必须针对proxy实例进行操作,而不是针对目标对象进行操作
+    如果handler没有设置任何拦截，那就等同于直接通向原对象。
+
+    Proxy 实例也可以作为其他对象的原型对象。
+    <script>
+        let proxy = new Proxy(target, handler);
+
+        var target = {};
+        var handler = {};
+        var proxy = new Proxy(target, handler);
+        proxy.a = 'b';
+        target.a // "b"
+    </script>
+
+    一个技巧是将 Proxy 对象，设置到object.proxy属性，从而可以在object对象上调用。
+    <script>
+        var object = {
+            proxy: new Proxy(target, handler);
+        }
+    </script>
+
+    Proxy实例也可以作为其他对象的原型对象
+    proxy对象是obj对象的原型，obj对象本身并没有time属性，所以根据原型链，会在proxy对象上读取该属性，导致被拦截。
+    <script>
+        var proxy = new Proxy({}, {
+            get: function (target, property) {
+                return 35;
+            }
+        });
+
+        let obj = Object.create(proxy);
+        obj.time //35
+    </script>
+</body>
+
+</html>
