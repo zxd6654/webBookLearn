@@ -16,13 +16,22 @@
         const queuedObservers = new Set();
 
         const observe = fn => queuedObservers.add(fn);
-        const observable = obj => new Proxy(obj, { set });
+        const observable = obj => new Proxy(obj, {
+            set
+        });
 
         function set(target, key, value, receiver) {
             const result = Reflect.set(target, key, value, receiver);
             queuedObservers.forEach(observer => observer());
             return result;
         }
+
+        //执行代码
+        observe(function () {
+            alert('要执行的函数')
+        });
+        const objProxy = observable({});
+        objProxy.newProperty = '新建属性';
     </script>
 </body>
 
