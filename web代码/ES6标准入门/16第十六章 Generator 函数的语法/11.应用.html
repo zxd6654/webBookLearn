@@ -40,7 +40,6 @@
 
         var it = main();
         it.next();
-
     </script>
 
     （2）控制流管理
@@ -90,6 +89,21 @@
 
         for (var step of iterateJobs(jobs)) {
             console.log(step.id);
+        }
+    </script>
+
+    （3）部署 Iterator 接口
+
+    （4）作为数据结构
+    <script>
+        function* doStuff() {
+            yield fs.readFile.bind(null, 'hello.txt');
+            yield fs.readFile.bind(null, 'world.txt');
+            yield fs.readFile.bind(null, 'and-such.txt');
+        }
+
+        for (task of doStuff()) {
+            // task是一个函数，可以像回调函数那样使用它
         }
     </script>
 </body>

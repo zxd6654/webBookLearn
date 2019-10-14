@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    Generator.prototype.throw()
+    Generator 函数返回的遍历器对象，都有一个throw方法，可以在函数体外抛出错误，然后在 Generator 函数体内捕获。
+    <script>
+        var g = function* () {
+            try {
+                yield;
+            } catch (e) {
+                console.log('内部捕获', e);
+            }
+        };
+
+        var i = g();
+        i.next();
+
+        try {
+            i.throw('a');
+            i.throw('b');
+        } catch (e) {
+            console.log('外部捕获', e);
+        }
+        // 内部捕获 a
+        // 外部捕获 b
+    </script>
+
+</body>
+
+</html>

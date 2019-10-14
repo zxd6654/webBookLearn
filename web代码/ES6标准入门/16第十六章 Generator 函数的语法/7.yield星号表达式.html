@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    yield* 表达式
+    如果在 Generator 函数内部，调用另一个 Generator 函数。需要在前者的函数体内部，自己手动完成遍历。
+    <script>
+        function* foo() {
+            yield 'a';
+            yield 'b';
+        }
+
+        function* bar() {
+            yield 'x';
+            yield* foo();
+            yield 'y';
+        }
+        for (let v of bar()) {
+            console.log(v);
+        }
+    </script>
+</body>
+
+</html>
