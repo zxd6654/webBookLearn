@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 </head>
+异步编程对js语言太重要. js语言的执行环境是单线程,如果没有异步编程,非卡死不可.
 
 <body>
     异步应用的传统方法:
@@ -18,6 +19,14 @@
     新方法:
     Generator
     async
+
+
+    回调函数:(回调函数本身并没有问题，它的问题出现在多个回调函数嵌套。会出现回调地狱)
+
+    Promise:它不是新的语法功能，而是一种新的写法，允许将回调函数的嵌套，改成链式调用。
+    Promise 的最大问题是代码冗余，原来的任务被 Promise 包装了一下，不管什么操作，一眼看去都是一堆then，原来的语义变得很不清楚。
+
+
 </body>
 
 </html>
