@@ -28,29 +28,23 @@ async函数返回一个 Promise 对象，可以使用then方法添加回调函�
         getStockPriceByName('goog').then(function (result) {
             console.log(result);
         });
-
     </script>
-
-    第一点，前面已经说过，await命令后面的Promise对象，运行结果可能是rejected，所以最好把await命令放在try...catch代码块中。
-
+    指定多少毫秒后输出一个值。
     <script>
-        async function myFunction() {
-            try {
-                await somethingThatReturnsAPromise();
-            } catch (err) {
-                console.log(err);
-            }
+        async function timeout(ms) {
+            await new Promise((resolve, reject) => {
+                setTimeout(resolve, ms)
+            })
         }
 
-        // 另一种写法
-
-        async function myFunction() {
-            await somethingThatReturnsAPromise()
-                .catch(function (err) {
-                    console.log(err);
-                });
+        async function asyncPrint(value, ms) {
+            await timeout(ms);
+            console.log(value);
         }
+
+        asyncPrint('hello world', 2000);
     </script>
+
 </body>
 
 </html>
