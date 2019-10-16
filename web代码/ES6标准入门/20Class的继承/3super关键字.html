@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+super这个关键字，既可以当作函数使用，也可以当作对象使用。在这两种情况下，它的用法完全不同。
+
+<body>
+    第一种情况，super作为函数调用时，代表父类的构造函数。ES6 要求，子类的构造函数必须执行一次super函数。
+    <script>
+        class A {}
+
+        class B extends A {
+            constructor() {
+                super();
+            }
+        }
+    </script>
+
+    第二种情况，super作为对象时，在普通方法中，指向父类的原型对象；在静态方法中，指向父类。
+    <script>
+        class A {
+            p() {
+                return 2;
+            }
+        }
+
+        class B extends A {
+            constructor() {
+                super();
+                console.log(super.p()); // 2
+            }
+        }
+
+        let b = new B();
+    </script>
+</body>
+
+</html>

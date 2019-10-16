@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+Class可以通过extends关键字实现继承
+
+子类必须在constructor方法中调用super方法，否则新建实例时会报错。
+这是因为子类自己的this对象，必须先通过父类的构造函数完成塑造，得到与父类同样的实例属性和方法，然后再对其进行加工，加上子类自己的实例属性和方法。
+如果不调用super方法，子类就得不到this对象。
+
+
+Object.getPrototypeOf方法可以用来从子类上获取父类。
+
+<body>
+
+</body>
+
+</html>
