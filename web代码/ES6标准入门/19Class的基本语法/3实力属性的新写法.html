@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        class IncreasingCounter {
+            _count = 0; //这个属性也可以定义在类的最顶层，其他都不变。
+            get value() {
+                console.log('Getting the current value!');
+                return this._count;
+            }
+            increment() {
+                this._count++;
+            }
+        }
+    </script>
+</body>
+
+</html>

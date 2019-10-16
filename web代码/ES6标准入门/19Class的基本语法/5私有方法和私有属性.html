@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+私有方法和私有属性,是只能在类的内部访问的方法和属性,外部不能访问.
+这是常见需求，有利于代码的封装，但 ES6 不提供，只能通过变通方法模拟实现。
+
+<body>
+    一种做法是在命名上加以区别。
+    <script>
+        class Widget {
+
+            // 公有方法
+            foo(baz) {
+                this._bar(baz);
+            }
+
+            // 私有方法
+            _bar(baz) {
+                return this.snaf = baz;
+            }
+
+            // ...
+        }
+    </script>
+
+    另一种方法就是索性将私有方法移出模块，因为模块内部的所有方法都是对外可见的。
+    <script>
+        class Widget {
+            foo(baz) {
+                bar.call(this, baz);
+            }
+
+            // ...
+        }
+
+        function bar(baz) {
+            return this.snaf = baz;
+        }
+    </script>
+
+    还有一种方法是利用Symbol值的唯一性，将私有方法的名字命名为一个Symbol值。
+    <script>
+        const bar = Symbol('bar');
+        const snaf = Symbol('snaf');
+
+        export default class myClass {
+
+            // 公有方法
+            foo(baz) {
+                this[bar](baz);
+            }
+
+            // 私有方法
+            [bar](baz) {
+                return this[snaf] = baz;
+            }
+
+            // ...
+        };
+    </script>
+
+    目前，有一个提案，为class加了私有属性。方法是在属性名之前，使用#表示。
+
+    私有属性也可以设置 getter 和 setter 方法。
+
+    私有属性不限于从this引用，只要是在类的内部，实例也可以引用私有属性。
+
+    私有属性和私有方法前面，也可以加上static关键字，表示这是一个静态的私有属性或私有方法。
+    <script>
+        // class Foo {
+        //     #a;
+        //     #b;
+
+        //     constructor(a, b) {
+        //         this.#a = a;
+        //         this.#b = b;
+        //     }
+
+        //     #sum() {
+        //         return #a + #b;
+        //     }
+        //     printSum() {
+        //         console.log(this.#sum());
+        //     }
+        // }
+    </script>
+</body>
+
+</html>

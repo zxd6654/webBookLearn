@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+ES6 的class可以看作只是一个语法糖，它的绝大部分功能，ES5 都可以做到，新的class写法只是让对象原型的写法更加清晰、更像面向对象编程的语法而已。
+
+ES6 的类,完全可以看作构造函数的另一种写法.
+
+ES6的类内部所有定义的方法,都是不可枚举的.而ES5是可枚举的
+
+
+<body>
+    constructor方法
+    是类的默认方法,通过new命令生成对象实例时,自动调用该方法.自动调用该方法。一个类必须有constructor方法，如果没有显式定义，一个空的constructor方法会被默认添加。
+
+    类必须使用new调用，否则会报错。这是它跟普通构造函数的一个主要区别，后者不用new也可以执行。
+
+    类的实例
+    与 ES5 一样，实例的属性除非显式定义在其本身（即定义在this对象上），否则都是定义在原型上（即定义在class上）。
+    <script>
+        //定义类
+        class Point {
+
+            constructor(x, y) {
+                this.x = x;
+                this.y = y;
+            }
+
+            toString() {
+                return '(' + this.x + ', ' + this.y + ')';
+            }
+
+        }
+
+        var point = new Point(2, 3);
+
+        point.toString() // (2, 3)
+
+        point.hasOwnProperty('x') //true
+        point.hasOwnProperty('y'); //true
+        point.hasOwnProperty('toString'); //false
+        point__proto__.hasOwnProperty('toString'); //true
+    </script>
+
+    取值函数(getter)和存值函数(setter)
+    与 ES5 一样，在“类”的内部可以使用get和set关键字，对某个属性设置存值函数和取值函数，拦截该属性的存取行为。
+
+
+    属性表达式
+
+    Class表达式
+    <script>
+        const MyClass = class Me {
+            getClassName() {
+                return Me.name;
+            }
+        };
+
+
+        //立即执行
+        let person = new class {
+            constructor(name) {
+                this.name = name;
+            }
+
+            sayName() {
+                console.log(this.name);
+            }
+        }('张三');
+
+        person.sayName(); // "张三"
+    </script>
+
+    注意点
+    1严格模式
+    类和模块的内部,默认就是严格模式,多以不需要使用use strict指定运行模式
+
+    2不存在提升
+    类不存在变量提升（hoist），这一点与 ES5 完全不同。
+    <script>
+        new Foo(); //ReferenceError
+        class Foo {}
+    </script>
+
+    3name属性
+    <script>
+        class Point {}
+        Point.name // "Point"
+    </script>
+
+    4Generator方法
+
+    5this指向
+    类的方法内部如果含有this，它默认指向类的实例。但是，必须非常小心，一旦单独使用该方法，很可能报错。
+</body>
+
+</html>
