@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+如果在一个模块之中，先输入后输出同一个模块，import语句可以与export语句写在一起。
+
+<body>
+    <script>
+        export {
+            foo,
+            bar
+        }
+        from 'my_module';
+
+        // 可以简单理解为
+        import {
+            foo,
+            bar
+        } from 'my_module';
+        export {
+            foo,
+            bar
+        };
+    </script>
+</body>
+
+
+</html>
