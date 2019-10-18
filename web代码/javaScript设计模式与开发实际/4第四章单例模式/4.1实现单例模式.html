@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+单例模式的定义就是:保证一个类仅有一个实例,并提供一个访问他的全局访问点.
+
+<body>
+    <script>
+        var Singleton = function (name) {
+            this.name = name;
+            this.instance = null;
+        }
+
+        Singleton.prototype.getName = function () {
+            alert(this.name);
+        }
+
+        Singleton.getInstance = function (name) {
+            if (!this.instance) {
+                this.instance = new Singleton(name);
+            }
+
+            return this.instance;
+        }
+
+        var a = Singleton.getInstance('sevn1');
+        var b = Singleton.getInstance('sevn2');
+
+        alert(a === b) //true
+    </script>
+    或者
+    <script>
+        var Singleton = function (name) {
+            this.name = name;
+        }
+
+        Singleton.prototypegetName = function () {
+            alert(this.name);
+        }
+
+        Singleton.getInstance = (function () {
+            var instance = null;
+            return function (name) {
+                if (!instance) {
+                    instance = new Singleton(name);
+                }
+                return instance;
+            }
+        })();
+
+        var a = Singleton.getInstance('sevn1');
+        var b = Singleton.getInstance('sevn2');
+
+        alert(a === b) //true
+    </script>
+</body>
+
+</html>
