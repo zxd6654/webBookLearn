@@ -7,9 +7,40 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 </head>
+透明的单例模式
 
 <body>
+    <script>
+        var CreateDiv = (function () {
+            var instance;
 
+            var CreateDiv = function (html) {
+                if (instance) {
+                    return instance;
+                }
+                this.html = html;
+                this.init();
+                return instance = this;
+            };
+
+            CreateDiv.prototype.init = function () {
+                var div = document.createElement('div');
+                div.innerHTML = this.html;
+                document.body.appendChild(div);
+            };
+
+            return CreateDiv;
+        })();
+
+        var a = new CreateDiv('sven1');
+        var b = new CreateDiv('sven2');
+
+        alert(a === b);
+    </script>
+
+    虽然现在完成了一个透明的单例类的编写，但它同样有一些缺点。
+    为了把 instance 封装起来，我们使用了自执行的匿名函数和闭包，并且让这个匿名函数返回
+    真正的 Singleton 构造方法，这增加了一些程序的复杂度，阅读起来也不是很舒服。
 </body>
 
 </html>
