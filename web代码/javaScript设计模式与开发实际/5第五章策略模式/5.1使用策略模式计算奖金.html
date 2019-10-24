@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+策略模式的定义是:定义一系列的算法,把他们一个个封装起来,并且使他们可以相互替换
+
+<body>
+    1.最初的代码实现
+    编写一个名为 calculateBonus 的函数来计算每个人的奖金数额。很显然，
+    calculateBonus 函数要正确工作，就需要接收两个参数：员工的工资数额和他的绩效考核等级。
+    <script>
+        var calculateBonus = function (performancelevel, salary) {
+            if (performancelevel === 'S') {
+                return salary * 4;
+            }
+
+            if (performancelevel === 'A') {
+                return salary * 3;
+            }
+        };
+
+        calculateBonus('B', 2000);
+    </script>
+    可以发现，这段代码十分简单，但是存在着显而易见的缺点。
+     calculateBonus 函数比较庞大，包含了很多 if-else 语句，这些语句需要覆盖所有的逻辑
+    分支。
+     calculateBonus 函数缺乏弹性，如果增加了一种新的绩效等级 C，或者想把绩效 S 的奖金
+    系数改为 5，那我们必须深入 calculateBonus 函数的内部实现，这是违反开放封闭原则的。
+     算法的复用性差，如果在程序的其他地方需要重用这些计算奖金的算法呢？我们的选择
+    只有复制和粘贴。
+
+    2.使用组合函数重构代码
+    将其中的各个算法提出来,编程一个个的函数,
+
+    3.使用利策模式重构代码
+    一个基于策略模式的程序至少由两部分组成:
+    1.一组策略类,策略类封装了具体的算法,并负责具体的计算过程.并负责具体的计算过程.
+    2.环境类context,context接收客户的请求,随后吧请求委托给某一个策略类.
+
+    这段代码是基于传统面向对象语言的模仿
+    <script>
+        //我们先把每种绩效的计算规则都封装在对应的策略类里面：
+        var performanceS = function () {};
+
+        performanceS.prototype.calculate = function (salary) {
+            return salary * 4;
+        }
+
+        var performanceA = function () {};
+
+        performanceA.prototype.calculate = function (salary) {
+            return salary * 3;
+        }
+
+        var performanceB = function () {};
+
+        performanceB.prototype.calculateBonus = function (salary) {
+            return salary * 2;
+        }
+
+        //接下来定义奖金类 Bonus：
+        var Bonus = function () {
+            this.salary = null; //原始工资
+            this.strategy = null; //绩效等级对应的策略对象
+        };
+
+        Bonus.prototype.setSalary = function (salary) {
+            this.salary = salary; //设置员工的原始工资
+        };
+
+        Bonus.prototype.setStrategy = function (strategy) {
+            this.strategy = strategy; // 设置员工绩效等级对应的策略对象
+        };
+
+        Bonus.prototype.getBonus = function () { // 取得奖金数额
+            return this.strategy.calculate(this.salary); // 把计算奖金的操作委托给对应的策略对象
+        };
+
+
+        var bonus = new Bonus();
+
+        bonus.setSalary(10000);
+
+        bonus.setStrategy(new performanceS()); // 设置策略对象
+        console.log(bonus.getBonus()); // 输出：40000
+
+        bonus.setStrategy(new performanceA()); // 设置策略对象
+        console.log(bonus.getBonus()); // 输出：30000
+    </script>
+</body>
+
+</html>
