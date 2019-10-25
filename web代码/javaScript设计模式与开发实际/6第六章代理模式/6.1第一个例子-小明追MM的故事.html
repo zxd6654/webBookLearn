@@ -7,9 +7,89 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 </head>
+代理模式是为一个对象提供一个代理用品或占位符,以便控制对他的访问
+
+代理模式的关键是,当用户不方便直接访问一个对象或者不满足需要的时候,
+提供一个替身对象来控制对这个对象的访问,客户实际上访问的是替身对象.
+替身对象对请求做出一些处理之后,再把请求交给本体对象.
 
 <body>
+    不用代理模式的情况
+    <script>
+        var Flower = function () {};
 
+        var xiaoming = {
+            sendFlower: function (target) {
+                var flower = new Flower();
+                target.receiveFlower(flower);
+            }
+        };
+
+        var A = {
+            receiveFlower: function (flower) {
+                console.log('收到花' + flower);
+            }
+        };
+        xiaoming.sendFlower(A);
+    </script>
+
+    引入代理B,即小明通过B来给A送花:
+    <script>
+        var Flower = function () {};
+
+        var xiaoming = {
+            sendFlower: function (target) {
+                var flower = new Flower();
+                target.receiveFlower(flower);
+            }
+        };
+
+        var B = {
+            receiveFlower: function (flower) {
+                A.receiveFlower(flower);
+            }
+        };
+
+        var A = {
+            receiveFlower: function (flower) {
+                console.log('收到花' + flower);
+            }
+        };
+        xiaoming.sendFlower(B);
+    </script>
+
+    以上的代码引入代理毫无用处
+    如果A心情变化会影响表白的成功率,这时代理就有用了
+    <script>
+        var Flower = function () {};
+
+        var xiaoming = {
+            sendFlower: function (target) {
+                var flower = new Flower();
+                target.receiveFlower(flower);
+            }
+        };
+
+        var B = {
+            receiveFlower: function (flower) {
+                A.lintenGoodMood(function () { //监听A的好心情
+                    A.receiveFlower(flower);
+                });
+            }
+        };
+
+        var A = {
+            receiveFlower: function (flower) {
+                console.log('收到花' + flower);
+            },
+
+            lintenGoodMood: function (fn) {
+                setTimeout(function () { //假设10秒之后A的心情变好
+                    fn();
+                }, 10000)
+            }
+        }
+    </script>
 </body>
 
 </html>
