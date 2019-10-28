@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+在web开发中,也许最大的开销就是网络请求
+
+<body>
+    我们可以通过一个代理函数 proxySynchronousFile 来收集一段时间之内的请求，
+    最后一次性发送给服务器
+    <script>
+        var synchronousFile = function (id) {
+            console.log('开始同步文件,id为:' + id);
+        };
+
+        var proxySynchronousFile = (function () {
+            var cache = [], //保存一段时间内需要同步的ID
+                timer; //定时器
+
+            return function (id) {
+                cache.push(id);
+                if (timer) { //保证不会覆盖已经启动的定时器
+                    return;
+                }
+
+                timer = setTimeout(function () {
+                    synchronousFile(cache.join(',')); //2秒后想本体发送需要同步的ID集合
+                    clearTimeout(timer);
+                    timer = null;
+                    cache.length = 0;
+                }, 2000);
+            }
+        })();
+
+        var checkbox = document.getElementsByTagName('input');
+
+        for (var i = 0, c; c = checkbox[i++];) {
+            c.onclick = function () {
+                if (this.checked === true) {
+                    proxySynchronousFile(this.id);
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
