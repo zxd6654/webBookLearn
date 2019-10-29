@@ -7,9 +7,21 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 </head>
+迭代器模式提供了循环访问一个对象中每个元素的方法,但是他没有规定我们
+以顺序,倒序还是中序来循环遍历聚合对象
 
 <body>
+    <script>
+        var reveseEach = function (ary, callback) {
+            for (var l = ary.length - 1; l >= 0; l--) {
+                callback(l, ary[l])
+            }
+        };
 
+        reveseEach([0, 1, 2], function (i, n) {
+            console.log(n);
+        });
+    </script>
 </body>
 
 </html>
