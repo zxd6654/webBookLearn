@@ -9,7 +9,33 @@
 </head>
 
 <body>
+    <script>
+        $.ajax('http:// xxx.com?login', function (data) { // 登录成功
+            login.trigger('loginSucc', data); // 发布登录成功的消息
+        });
 
+        //各模块监听登录成功的消息：
+        var header = (function () { // header 模块
+            login.listen('loginSucc', function (data) {
+                header.setAvatar(data.avatar);
+            });
+            return {
+                setAvatar: function (data) {
+                    console.log('设置 header 模块的头像');
+                }
+            }
+        })();
+        var nav = (function () { // nav 模块
+            login.listen('loginSucc', function (data) {
+                nav.setAvatar(data.avatar);
+            });
+            return {
+                setAvatar: function (avatar) {
+                    console.log('设置 nav 模块的头像');
+                }
+            }
+        })();
+    </script>
 </body>
 
 </html>
