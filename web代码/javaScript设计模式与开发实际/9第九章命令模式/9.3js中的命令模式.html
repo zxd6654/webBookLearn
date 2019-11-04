@@ -7,9 +7,60 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 </head>
+命令模式的由来,其实是回调函数的一个面向对象的替代品
 
 <body>
+    <script>
+        var bindClick = function (button, func) {
+            button.onlick = func;
+        };
 
+        var MenuBar = {
+            refresh: function () {
+                console.log('刷新菜单界面');
+            }
+        };
+
+        var SubMenu = {
+            add: function () {
+                console.log('增加子菜单');
+            },
+
+            del: function () {
+                console.log('删除子菜单');
+            }
+        };
+
+        bindClick(button1, MenuBar.refresh);
+        bindClick(button2, SubMenu.add);
+        bindClick(button3, MenuBar.del);
+    </script>
+
+    用闭包实现命令模式
+    <script>
+        var MenuBar = {
+            refresh: function () {
+                console.log('刷新菜单界面');
+            }
+        };
+
+        var RefreshMenuBarCommand = function (receiver) {
+            return {
+                execute: function () {
+                    receiver.refresh();
+                }
+            }
+        };
+
+        var setCommand = function (button, command) {
+            button.onlick = function () {
+                command.execute();
+            }
+        };
+
+        var refreshMenuBarCommand = RefreshMenuBarCommand(MenuBar);
+        setCommand(button1, refreshMenuBarCommand);
+    </script>
 </body>
 
 </html>
