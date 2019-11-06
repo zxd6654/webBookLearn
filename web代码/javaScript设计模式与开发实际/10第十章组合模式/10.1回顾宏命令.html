@@ -1,47 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
+
 <body>
-<script>
-    //宏命令代码
-    var closeDoorCommand = {
-        execute: function () {
-            console.log('关门');
-        }
-    };
-    var openPcCommand = {
-        execute: function () {
-            console.log('开电脑');
-        }
-    };
-    var openQQCommand = {
-        execute: function () {
-            console.log('登录QQ');
-        }
-    };
-    var MacroCommand = function () {
-        return {
-            commandsList: [],
-            add: function (command) {
-                this.commandsList.push(command);
-            },
+    <script>
+        //宏命令代码
+        var closeDoorCommand = {
             execute: function () {
-                for (var i = 0, command; command = this.commandsList[i++];) {
-                    command.execute();
+                console.log('关门');
+            }
+        };
+        var openPcCommand = {
+            execute: function () {
+                console.log('开电脑');
+            }
+        };
+        var openQQCommand = {
+            execute: function () {
+                console.log('登录QQ');
+            }
+        };
+        var MacroCommand = function () {
+            return {
+                commandsList: [],
+                add: function (command) {
+                    this.commandsList.push(command);
+                },
+                execute: function () {
+                    for (var i = 0, command; command = this.commandsList[i++];) {
+                        command.execute();
+                    }
                 }
             }
-        }
-    };
+        };
 
-    var macroCommand = MacroCommand();
-    macroCommand.add(closeDoorCommand);
-    macroCommand.add(openPcCommand);
-    macroCommand.add(openQQCommand);
+        var macroCommand = MacroCommand();
+        macroCommand.add(closeDoorCommand);
+        macroCommand.add(openPcCommand);
+        macroCommand.add(openQQCommand);
 
-    macroCommand.execute();
-</script>
+        macroCommand.execute();
+    </script>
+
+    组合模式将对象组合成树形结构,以表示'部分-整体'的层次结构.
+    除了用来表示树形结构之外,组合模式的另外一个好处是通过对象的多态性表现,
+    使得用户对单个对象和组合对象的使用具有一致性
 </body>
+
 </html>
