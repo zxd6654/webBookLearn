@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+ajax全称"Asynchronous JavaScript and XML"(异步javaScript和XML),
+ajax不是新的编程语言,而是哟中使用现有标准的新方法
+ajax是与服务器交换数据并更新部分网页的艺术,在不重新加载整个页面的情况下
+
+XMLHttpRequest是ajax的基础
+
+所有现代浏览器均支持XMLHttpRequest对象(ie5和ie6使用ActiveXObject)
+
+<body>
+    <script>
+        var xmlhttp;
+        //兼容性
+        if (window.XMLHttpRequest) {
+            xmlhttp = new XMLHttpRequest();
+        } else {
+            xmlhttp = new ActiveXObject('Microsoft.XMLHTTP');
+        }
+
+        //向服务器发送请求
+        xmlhttp.open(method, url, true);
+        xmlhttp.send(string) //string：仅用于 POST 请求
+
+
+        //如果需要HTML变淡那样的POST数据,使用setRequestHeader()添加http头
+        //然后在send方法中规定您希望发送的数据
+        xmlhttp.open('POST', 'ajax_test.asp', true);
+        xmlhttp.setRequestHeader('"Content-type","application/x-www-form-urlencoded"');
+        xmlhttp.send("fname=Bill&lname=Gates")
+
+
+        //服务器响应
+        xmlhttp.onreadystatuschange = function () {
+            if (xmlhttp.readyStatus === 4 && xmlhttp.status === 200) {
+                console.log(xmlhttp.responseText);
+            }
+        }
+    </script>
+</body>
+
+</html>
