@@ -7,9 +7,43 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 </head>
+亨元(flyweight)模式是一种用于性能优化的模式,'fly'咋这里是苍蝇的意思,意为蝇量级
+亨元模式的核心是运用共享技术来有效支持大量细粒度的对象
+
+如果系统中因为创建了大量类似的对象而导致内存占用过高,亨元模式就非常有用了
+在js中,浏览器特别是移动端的浏览器分配的内存并不算多,如何节省内存就成了一键非常有意义的事情
 
 <body>
+    现在一共有 50 种男内
+    衣和 50 种女内衣，所以一共会产生 100 个对象。如果将来生产了 10000 种内衣，那这个程序可
+    能会因为存在如此多的对象已经提前崩溃。
+    下面我们来考虑一下如何优化这个场景。虽然有 100 种内衣，但很显然并不需要 50 个男
+    模特和 50 个女模特。其实男模特和女模特各自有一个就足够了，他们可以分别穿上不同的内
+    衣来拍照。
+    <script>
+        var Model = function (sex) {
+            this.sex = sex;
+        };
 
+        Model.prototype.takePhoto = function () {
+            console.log('sex' = +this.sex + 'underwear' + this.underwear);
+        };
+
+        //分别创建一个男模特对象和一个女模特对象
+        var maleModel = new Model('male');
+        var femalModel = new Model('female');
+
+        // 给男模特依次穿上所有的男装，并进行拍照：
+        for (var i = 1; i <= 50; i++) {
+            maleModel.underwear = 'underwear' + i;
+            maleModel.takePhoto();
+        };
+        //同样，给女模特依次穿上所有的女装，并进行拍照：
+        for (var j = 1; j <= 50; j++) {
+            femaleModel.underwear = 'underwear' + j;
+            femaleModel.takePhoto();
+        };
+    </script>
 </body>
 
 </html>
