@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+给对象动态的增加职责的方式称为装饰者模式
+装饰者模式能够在不改变对象自身的基础上,在程序运行期间给对象动态的添加职责
+
+跟继承相比，装饰者是一种更轻便灵活的做法，这是一种“即用即付”的方式，
+
+<body>
+    <script>
+        var Plane = function () {}
+        Plane.prototype.fire = function () {
+            console.log('发射普通子弹');
+        }
+        // 接下来增加两个装饰类， 分别是导弹和原子弹：
+        var MissileDecorator = function (plane) {
+            this.plane = plane;
+        }
+        MissileDecorator.prototype.fire = function () {
+            this.plane.fire();
+            console.log('发射导弹');
+        }
+        var AtomDecorator = function (plane) {
+            this.plane = plane;
+        }
+        AtomDecorator.prototype.fire = function () {
+            this.plane.fire();
+            console.log('发射原子弹');
+        }
+
+        var plane = new Plane();
+        plane = new MissileDecorator(plane);
+        plane = new AtomDecorator(plane);
+
+        plane.fire();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+很多时候我们不想去碰原函数，也许原函数是由其他同事编写的，里面的实现非常杂乱。甚
+至在一个古老的项目中，这个函数的源代码被隐藏在一个我们不愿碰触的阴暗角落里。现在需要
+一个办法，在不改变函数源代码的情况下，能给函数增加功能，这正是开放封闭原则给我们指
+出的光明道路。
+
+<body>
+    通过保存原引用的方式就可以改写某个函数：
+
+    <script>
+        var a = function () {
+            alert(1);
+        }
+
+        var _a = a;
+
+        a = function () {
+            _a();
+            alert(2);
+        }
+    </script>
+    必须维护_a 这个中间变量，虽然看起来并不起眼，但如果函数的装饰链较长，或者
+    需要装饰的函数变多，这些中间变量的数量也会越来越多。
+
+    其实还遇到了 this 被劫持的问题
+</body>
+
+</html>
