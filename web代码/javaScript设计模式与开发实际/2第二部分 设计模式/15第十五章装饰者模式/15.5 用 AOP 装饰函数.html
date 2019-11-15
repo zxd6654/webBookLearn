@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    Function.prototype.before 接受一个函数当作参数，这个函数即为新添加的函数，它装载了
+    新添加的功能代码。
+    接下来把当前的 this 保存起来，这个 this 指向原函数，然后返回一个“代理”函数，这个
+    “代理”函数只是结构上像代理而已，并不承担代理的职责（比如控制对象的访问等）。它的工作
+    是把请求分别转发给新添加的函数和原函数，且负责保证它们的执行顺序，让新添加的函数在原
+    函数之前执行（前置装饰），这样就实现了动态装饰的效果。
+
+    <button id='button'></button>
+    <script>
+        Function.prototype.before = function (beforefn) {
+            var __self = this; // 保存原函数的引用
+            return function () { // 返回包含了原函数和新函数的"代理"函数
+                beforefn.apply(this, arguments); // 执行新函数，且保证 this 不被劫持，新函数接受的参数
+                // 也会被原封不动地传入原函数，新函数在原函数之前执行
+                return __self.apply(this, arguments); // 执行原函数并返回原函数的执行结果，
+                // 并且保证 this 不被劫持
+            }
+        }
+
+        Function.prototype.after = function (afterfn) {
+            var __self = this;
+            return function () {
+                var ret = __self.apply(this, arguments);
+                afterfn.apply(this, arguments);
+                return ret;
+            }
+        };
+
+        // document.getElementById = document.getElementById.before(function () {
+        //     alert(1);
+        // });
+        document.getElementById = document.getElementById.after(function () {
+            alert(1);
+        });
+
+        var button = document.getElementById('button');
+
+        console.log(button);
+    </script>
+
+    上面的 AOP 实现是在 Function.prototype 上添加 before 和 after 方法，但许
+    多人不喜欢这种污染原型的方式，那么我们可以做一些变通，把原函数和新函数都作为参数传入
+    before 或者 after 方法：
+    <script>
+        var before = function (fn, beforefn) {
+            return function () {
+                beforefn.apply(this, arguments);
+                return fn.apply(this, arguments);
+            }
+        }
+        var a = before(
+            function () {
+                alert(3)
+            },
+            function () {
+                alert(2)
+            }
+        );
+        a = before(a, function () {
+            alert(1);
+        });
+        a();
+    </script>
+</body>
+
+</html>

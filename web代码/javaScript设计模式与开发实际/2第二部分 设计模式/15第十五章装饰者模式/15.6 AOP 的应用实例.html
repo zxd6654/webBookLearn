@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    数据统计上报
+
+    比如页面中有一个登录 button，点击这个 button 会弹出登录浮层，与此同时要进行数据上报，
+    来统计有多少用户点击了这个登录 button：
+
+    <button tag="login" id="button">点击打开登录浮层</button>
+    <script>
+        Function.prototype.after = function (afterfn) {
+            var __self = this;
+            return function () {
+                var ret = __self.apply(this, arguments);
+                afterfn.apply(this, arguments);
+                return ret;
+            }
+        };
+
+        var showLogin = function () {
+            console.log('打开登录浮层');
+        }
+
+        var log = function () {
+            console.log('上报标签为: ' + this.getAttribute('tag'));
+        }
+
+        showLogin = showLogin.after(log); // 打开登录浮层之后上报数据
+        document.getElementById('button').onclick = showLogin;
+    </script>
+
+    用AOP动态改变函数的参数
+
+    插件式的表单验证
+</body>
+
+</html>
