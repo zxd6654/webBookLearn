@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+在这两个例子中，我们并没有太多地从性能方面考虑问题，实际上，这里有一些比较大的优
+化点。
+ 有两种选择来管理 state 对象的创建和销毁。第一种是仅当 state 对象被需要时才创建并
+随后销毁，另一种是一开始就创建好所有的状态对象，并且始终不销毁它们。如果 state
+对象比较庞大，可以用第一种方式来节省内存，这样可以避免创建一些不会用到的对象
+并及时地回收它们。但如果状态的改变很频繁，最好一开始就把这些 state 对象都创建出
+来，也没有必要销毁它们，因为可能很快将再次用到它们。
+ 在本章的例子中，我们为每个 Context 对象都创建了一组 state 对象，实际上这些 state
+对象之间是可以共享的，各 Context 对象可以共享一个 state 对象，这也是享元模式的应
+用场景之一。
+
+<body>
+
+</body>
+
+</html>
