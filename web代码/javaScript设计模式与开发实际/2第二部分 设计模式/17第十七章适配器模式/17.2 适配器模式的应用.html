@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    baiduMap 这个对象来源于第三方，正常情况下我们都不应该去改动它。此时我们可以通过增
+    加 baiduMapAdapter 来解决问题：
+    <script>
+        var googleMap = {
+            show: function () {
+                console.log('开始渲染谷歌地图');
+            }
+        };
+
+        var baiduMap = {
+            display: function () {
+                console.log('开始渲染百度地图');
+            }
+        };
+
+        var baiduMapAdapter = {
+            show: function () {
+                return baiduMap.display();
+            }
+        };
+
+        var renderMap = function (map) {
+            if (map.show instanceof Function) {
+                map.show();
+            }
+        };
+
+        renderMap(googleMap); // 输出：开始渲染谷歌地图
+        renderMap(baiduMapAdapter); // 输出：开始渲染百度地图
+    </script>
+</body>
+
+</html>
