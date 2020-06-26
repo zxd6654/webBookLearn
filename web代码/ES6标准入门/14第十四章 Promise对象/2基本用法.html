@@ -12,7 +12,7 @@
     es6规定,promise对象是一个构造函数,用来生成Promise实例
 
     <script>
-        const promise = new promise(function (resolve, reject) {
+        const promise = new Promise(function (resolve, reject) {
             // ... some code
 
             if (true) {
@@ -96,7 +96,7 @@
     finally方法用于指定不管 Promise 对象最后状态如何，都会执行的操作。该方法是 ES2018 引入标准的。
     <script>
         promise
-            .then(result => {})
+            .then(result => {},error=>{})
             .catch(error => {})
             .finally(() => {});
     </script>

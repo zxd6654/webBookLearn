@@ -11,14 +11,19 @@
     Proxy用于修改某些操作的默认行为，等同于在语言层面作出修改，所以属于一种‘元编程’，即对编程语言进行编程
     <script>
         //对空对象的set和get进行了拦截
-        let obj = new Proxy({}, {
-            get(target, p, receiver) {
-                console.log(`getting ${target, p}`);
-                return Reflect.get(target, p, receiver);
+        let oldObj={name:'zxd'};
+
+        let obj = new Proxy(oldObj, {
+            //target  目标对象
+            //property 属性 obj.xxx  里面的xxx
+            //receiver  Proxy实例本身
+            get(target, property, receiver) {
+                console.log(`getting ${target},${property}`);
+                return Reflect.get(target, property, receiver);
             },
-            set(target, p, value, receiver) {
-                console.log(`setting ${target, p, value}`);
-                return Reflect.set(target, p, value, receiver);
+            set(target, property, value, receiver) {
+                console.log(`setting ${target},${property},${value}`);
+                return Reflect.set(target, property, value, receiver);
             }
         });
 
