@@ -73,22 +73,22 @@
 
     私有属性和私有方法前面，也可以加上static关键字，表示这是一个静态的私有属性或私有方法。
     <script>
-        // class Foo {
-        //     #a;
-        //     #b;
+        class Foo {
+            #a;
+            #b;
 
-        //     constructor(a, b) {
-        //         this.#a = a;
-        //         this.#b = b;
-        //     }
+            constructor(a, b) {
+                this.#a = a;
+                this.#b = b;
+            }
 
-        //     #sum() {
-        //         return #a + #b;
-        //     }
-        //     printSum() {
-        //         console.log(this.#sum());
-        //     }
-        // }
+            #sum() {
+                return this.#a + this.#b;
+            }
+            printSum() {
+                console.log(this.#sum());
+            }
+        }
     </script>
 </body>
 
