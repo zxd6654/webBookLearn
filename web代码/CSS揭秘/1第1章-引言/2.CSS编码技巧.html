@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            color: red;
+        }
+
+        hr {
+            height: 10px;
+            background: currentColor;
+        }
+    </style>
+</head>
+
+<body>
+    1 尽量减少改动时要编译的地方
+    当某些值相互依赖时，应该把他们的相互关系用代码表达出来
+    代码维护和代码量少不可兼得
+
+    2 currentColor 颜色关键字
+    例如，水平分割线自动与文本颜色保持一致
+    <hr>
+
+    3 继承
+    inherit关键字可以用在任何CSS属性中，而且他总是绑定到父元素的计算值
+
+    如果我们希望四边的内边距看起来是基本一致的，就需要减少顶部和底部的内边距
+
+    关于响应式网页的设计
+    媒体查询
+    媒体查询的断点不应该由具体的设备来决定，而应该根据设计自身来决定
+
+    以下两段代码并不是等价的
+    background:red; 简写属性
+    bachground-color:red; 展开属性
+
+    合理使用简写是一种良好的防卫性编码方式，可以抵御未来的风险
+    background: url() top right,
+    url() bottom right,
+    url() bottom left;
+    background-repeat: no-repeat;
+
+    预处理器的使用
+    stylus less scss
+    预处理器可以让代码更加灵活，健壮，DRY
+    预处理器存在一些缺点，要合理使用
+    
+
+</body>
+
+</html>

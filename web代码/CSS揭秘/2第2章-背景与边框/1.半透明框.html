@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background: #333333;
+        }
+
+        div {
+            height: 200px;
+            border: 10px solid hsla(0, 0%, 100%, .5);
+            background: white;
+            background-clip: padding-box;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        半透明边框
+        半透明颜色 rgba() hsla()
+        默认情况下，背景会延申到边框所在的区域下层，
+        这时没有让div的背景从半透明边框处透出来，
+        而是在半透明边框透出了这个容器自己的纯白实色背景
+        而background-clip：padding-box 可以裁剪掉背景侵入边框的范围
+    </div>
+</body>
+
+</html>
