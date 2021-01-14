@@ -220,7 +220,7 @@
 				if ( toolTipPool.length === 0 ){ // 如果对象池为空
 					var div = document.createElement( 'div' ); // 创建一个dom
 					document.body.appendChild( div );
-					recovereturn div;
+					return div;
 				}else{ // 如果对象池里不为空
 					return toolTipPool.shift(); // 则从对象池中取出一个dom
 				}
