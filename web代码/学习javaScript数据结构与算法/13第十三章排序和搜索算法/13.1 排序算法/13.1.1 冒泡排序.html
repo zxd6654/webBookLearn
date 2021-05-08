@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    冒泡排序比较所有相邻的两个项，如果第一个比第二个大，则交换它们。元素项向上移动至
+    正确的顺序，就好像气泡升至表面一样，冒泡排序因此得名。
+
+    人们开始学习排序算法时，通常都先学冒泡算法，因为它在所有排序算法中最简单。然而，
+    从运行时间的角度来看，冒泡排序是最差的一个
+
+    即便我们做了这个小改变来改进冒泡排序算法，
+    但还是不推荐该算法，它的复杂度是 O(n2)
+    )
+    <script>
+        function bubbleSort(array) {
+            const { length } = array;
+            for (let i = 0; i < length; i++) {
+                for (let j = 0; j < length - 1; j++) {//这里的length-1是因为内部循环接换位置次数是length-1
+                    if (array[j] > array[j + 1]) {
+                        [array[j], array[j + 1]] = [array[j + 1], array[j]];
+                    }
+                }
+            }
+            return array;
+        }
+        document.write(bubbleSort([5, 4, 3, 2, 1]))
+
+        // 改进后的冒泡排序
+        // 图是网络结构的抽象模型。图是一组由边连接的节点（或顶点）。学习图是重要的，因为任
+        // 何二元关系都可以用图来表示
+
+        function modifiedBubbleSort(array) {
+            const { length } = array;
+            for (let i = 0; i < length; i++) {
+                for (let j = 0; j < length - 1 - i; j++) {//这里的length-1是因为内部循环接换位置次数是length-1
+                    if (array[j] > array[j + 1]) {
+                        [array[j], array[j + 1]] = [array[j + 1], array[j]];
+                    }
+                }
+            }
+            return array;
+        }
+
+        document.write('<br/>' + modifiedBubbleSort([5, 4, 3, 2, 1]))
+    </script>
+</body>
+
+</html>
