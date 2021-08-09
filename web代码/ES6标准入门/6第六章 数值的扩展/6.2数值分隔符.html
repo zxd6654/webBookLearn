@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    ES2021，允许 JavaScript 的数值使用下划线（_）作为分隔符。
+    <script>
+        let budge = 1_000_000_000_000;
+        budge === 10 ** 12;
+
+
+        123_00 === 12_300 // true
+
+        12345_00 === 123_4500 // true
+        12345_00 === 1_234_500 // true
+
+        // 小数
+        0.000_001
+
+        // 科学计数法
+        1e10_000
+    </script>
+</body>
+
+</html>
