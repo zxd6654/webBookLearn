@@ -29,5 +29,7 @@ find方法的回调函数可以接受三个参数，依次为当前的值、当�
         [NaN].findIndex(y => Object.is(NaN, y))// 0
 </script>
 //上面代码中，indexOf方法无法识别数组的NaN成员，但是findIndex方法可以借助Object.is方法做到。
+
+这两个方法都可以接受第二个参数，用来绑定回调函数的this对象。
 </body>
 </html>
