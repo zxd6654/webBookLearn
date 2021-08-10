@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+    Object.assign方法用于对象的合并，将源对象（source）的所有可枚举属性，复制到目标对象（target）。
+
+    Object.assign方法实行的是浅拷贝，而不是深拷贝。
+
+    对于这种嵌套的对象，一旦遇到同名属性，Object.assign的处理方法是替换，而不是添加。
+
+    Object.assign可以用来处理数组，但是会把数组视为对象。
+    <script>
+        const target = { a: 1 };
+
+        const source1 = { b: 2 };
+        const source2 = { c: 3 };
+
+        Object.assign(target, source1, source2);
+        console.log(target); // {a:1, b:2, c:3}
+
+
+        const v1 = 'abc';
+        const v2 = true;
+        const v3 = 10;
+
+        const obj = Object.assign({}, v1, v2, v3);
+        console.log(obj); // { "0": "a", "1": "b", "2": "c" }
+
+        Object.assign([1, 2, 3], [4, 5])
+        // [4, 5, 3]
+    </script>
+
+    常见用途
+    为对象添加属性
+    为对象添加方法
+    克隆对象
+    合并多个对象
+    为属性指定默认值
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+    Object.getOwnPropertyDescriptors(); ES2017 引入了Object.getOwnPropertyDescriptors()方法，返回指定对象所有自身属性（非继承属性）的描述对象。
+
+    __proto__属性 
+
+    Object.setPrototypeOf() 
+
+    Object.getPrototypeOf() 
+
+    Object.keys()，Object.values()，Object.entries()
+
+    Object.fromEntries()方法是Object.entries()的逆操作，用于将一个键值对数组转为对象。
+    该方法的主要目的，是将键值对的数据结构还原为对象，因此特别适合将 Map 结构转为对象。
+    <script>
+        Object.fromEntries([
+            ['foo', 'bar'],
+            ['baz', 42]
+        ])
+    // { foo: "bar", baz: 42 }
+    </script>
+</body>
+
+</html>
