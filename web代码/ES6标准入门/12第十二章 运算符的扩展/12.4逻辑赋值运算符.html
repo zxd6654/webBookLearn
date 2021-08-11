@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    ES2021 引入了三个新的逻辑赋值运算符（logical assignment operators），将逻辑运算符与赋值运算符进行结合。
+
+    <script>
+        // 或赋值运算符
+        x ||= y
+        // 等同于
+        x || (x = y)
+
+        // 与赋值运算符
+        x &&= y
+        // 等同于
+        x && (x = y)
+
+        // Null 赋值运算符
+        x ??= y
+        // 等同于
+        x ?? (x = y)
+
+
+        // 老的写法
+        user.id = user.id || 1;
+
+        // 新的写法
+        user.id ||= 1;
+    </script>
+</body>
+
+</html>

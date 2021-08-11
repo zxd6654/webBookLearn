@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    链判断运算符?.有三种写法。
+
+    obj?.prop // 对象属性是否存在
+    obj?.[expr] // 同上
+    func?.(...args) // 函数或对象方法是否存在
+    <script>
+        const firstName = (message
+            && message.body
+            && message.body.user
+            && message.body.user.firstName) || 'default';
+
+        const firstName2 = message?.message.body?.message.body.user?.message.body.user.firstName || "default"
+    </script>
+    下面是判断对象方法是否存在，如果存在就立即执行的例子。
+
+    如果a不是null或undefined，但也不是函数，那么a?.()会报错。
+    <script>
+        iterator.return?.()
+
+        a?.b
+        // 等同于
+        a == null ? undefined : a.b
+    </script>
+</body>
+
+</html>
