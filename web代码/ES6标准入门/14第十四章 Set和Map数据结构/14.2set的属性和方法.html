@@ -75,6 +75,13 @@
         // ["red", "red"]
         // ["green", "green"]
         // ["blue", "blue"]
+
+        for (let x of set) {
+            console.log(x);
+        }
+        // red
+        // green
+        // blue
     </script>
     <!--（2）forEach()-->
 
@@ -102,6 +109,19 @@
         //差集
         let difference = new Set([...a].filter(x => !b.has(x)));
         console.log([...difference]);
+    </script>
+
+    同步改变原来的 Set 结构
+    <script>
+        // 方法一
+        let set = new Set([1, 2, 3]);
+        set = new Set([...set].map(val => val * 2));
+        // set的值是2, 4, 6
+
+        // 方法二
+        let set = new Set([1, 2, 3]);
+        set = new Set(Array.from(set, val => val * 2));
+// set的值是2, 4, 6
     </script>
 </body>
 
