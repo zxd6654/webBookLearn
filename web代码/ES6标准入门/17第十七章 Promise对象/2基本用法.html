@@ -84,6 +84,20 @@
         });
     </script>
 
+    注意，调用resolve或reject并不会终结 Promise 的参数函数的执行。
+    调用resolve(1)以后，后面的console.log(2)还是会执行，并且会首先打印出来。
+    这是因为立即 resolved 的 Promise 是在本轮事件循环的末尾执行，总是晚于本轮循环的同步任务。
+    <script>
+        new Promise((resolve, reject) => {
+            resolve(1);
+            console.log(2);
+        }).then(r => {
+            console.log(r);
+        });
+// 2
+// 1
+    </script>
+
     1 Promise.prototype.then()
     它的作用是为 Promise 实例添加状态改变时的回调函数。
     then方法返回的是一个新的Promise实例。因此可以采用链式写法,即then方法后面再调用另一个then方法
@@ -96,9 +110,9 @@
     finally方法用于指定不管 Promise 对象最后状态如何，都会执行的操作。该方法是 ES2018 引入标准的。
     <script>
         promise
-            .then(result => {},error=>{})
-            .catch(error => {})
-            .finally(() => {});
+            .then(result => { }, error => { })
+            .catch(error => { })
+            .finally(() => { });
     </script>
 
     4 Promise.all()

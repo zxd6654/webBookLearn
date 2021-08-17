@@ -26,14 +26,31 @@
     Promise.race()
     Promise.race方法同样是将多个 Promise 实例，包装成一个新的 Promise 实例。
 
+    Promise.allSettled()
+    用来确定一组异步操作是否都结束了（不管成功或失败）。所以，它的名字叫做”Settled“，包含了”fulfilled“和”rejected“两种情况。
+    Promise.allSettled()方法接受一个数组作为参数，数组的每个成员都是一个 Promise 对象，并返回一个新的 Promise 对象。
+    只有等到参数数组的所有 Promise 对象都发生状态变更（不管是fulfilled还是rejected），返回的 Promise 对象才会发生状态变更。
+
+    Promise.any()
+    该方法接受一组 Promise 实例作为参数，包装成一个新的 Promise 实例返回。
+    只要参数实例有一个变成fulfilled状态，包装实例就会变成fulfilled状态；如果所有参数实例都变成rejected状态，包装实例就会变成rejected状态。
+
     Promise.resolve()
     有时需要将现有对象转为 Promise 对象，Promise.resolve方法就起到这个作用。
+
+    需要注意的是，立即resolve()的 Promise 对象，是在本轮“事件循环”（event loop）的结束时执行，而不是在下一轮“事件循环”的开始时。
+    <script>
+        Promise.resolve('foo')
+        // 等价于
+        new Promise(resolve => resolve('foo'))
+    </script>
 
     Promise.reject()
     方法也会返回一个新的 Promise 实例，该实例的状态为rejected。
 
     Promise.try()
-    实际开发中，经常遇到一种情况：不知道或者不想区分，函数f是同步函数还是异步操作，但是想用 Promise 来处理它。因为这样就可以不管f是否包含异步操作，都用then方法指定下一步流程，用catch方法处理f抛出的错误。
+    实际开发中，经常遇到一种情况：不知道或者不想区分，函数f是同步函数还是异步操作，但是想用 Promise 来处理它。
+    因为这样就可以不管f是否包含异步操作，都用then方法指定下一步流程，用catch方法处理f抛出的错误。
     <script>
         // Generator 函数与 Promise 的结合
         function getFoo() {
