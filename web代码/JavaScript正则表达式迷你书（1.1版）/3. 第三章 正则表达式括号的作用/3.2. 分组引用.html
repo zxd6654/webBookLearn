@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    这是括号一个重要的作用，有了它，我们就可以进行数据提取，以及更强大的替换操作。
+
+    3.2.1. 提取数据
+    <script>
+        var regex = /(\d{4})-(\d{2})-(\d{2})/;
+        var string = "2017-06-12";
+        console.log(string.match(regex));
+        // => ["2017-06-12", "2017", "06", "12", index: 0, input: "2017-06-12"]
+
+
+        regex.exec(string);
+
+        console.log(RegExp.$1); // "2017"
+        console.log(RegExp.$2); // "06"
+        console.log(RegExp.$3); // "12"
+    </script>
+
+    3.2.2. 替换
+    <script>
+        var regex = /(\d{4})-(\d{2})-(\d{2})/;
+        var string = "2017-06-12";
+        var result = string.replace(regex, "$2/$3/$1");
+        console.log(result);
+        // => "06/12/2017"
+
+    </script>
+</body>
+
+</html>

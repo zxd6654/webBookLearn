@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
@@ -7,28 +8,40 @@
     ^,$,\b,\B,(?=p),(?!p)
     对应的可视化形式： /^$\b\B(?=a)(?!b)/g
 </head>
+
 <body>
-<script>
-    /**2.2.1. ^ 和 $*/
+    <script>
+        /**2.2.1. ^ 和 $*/
         //^(脱字符)匹配开头，在多行匹配中匹配行开头。
         //$（美元符号）匹配结尾，在多行匹配中匹配行结尾。
-    var result = "hello".replace(/^|$/g, '#');
-    console.log(result);
-    // => "#hello#"
+        var result = "hello".replace(/^|$/g, '#');
+        console.log(result);
+        // => "#hello#"
 
-    //多行匹配模式（即有修饰符 m）时，二者是行的概念，这一点需要我们注意：
-    var result = "I\nlove\njavascript".replace(/^|$/gm, '#');
-    console.log(result);
-    /*
-    #I#
-    #love#
-    #javascript#
-    */
+        //多行匹配模式（即有修饰符 m）时，二者是行的概念，这一点需要我们注意：
+        var result = "I\nlove\njavascript".replace(/^|$/gm, '#');
+        console.log(result);
+        /*
+        #I#
+        #love#
+        #javascript#
+        */
 
-    /**2.2.2. \b 和 \B*/
+        /**2.2.2. \b 和 \B*/
+        //\b 是单词边界，具体就是 \w 与 \W 之间的位置，也包括 \w 与 ^ 之间的位置，和 \w 与 $ 之间的位置。
+        //\B 就是 \b 的反面的意思，非单词边界
+        var result = "[JS] Lesson_01.mp4".replace(/\b/g, '#');
+        console.log(result);
+        // => "[#JS#] #Lesson_01#.#mp4#"
 
+        var result = "[JS] Lesson_01.mp4".replace(/\B/g, '#');
+        console.log(result);
+        // => "#[J#S]# L#e#s#s#o#n#_#0#1.m#p#4"
 
-    /**2.3. 位置的特性*/
-</script>
+        /**2.3.  (?=p) 和 (?!p)*/
+        //(?=p)，其中 p 是一个子模式，即 p 前面的位置
+        //(?!p) 就是 (?=p) 的反面意思
+    </script>
 </body>
+
 </html>
