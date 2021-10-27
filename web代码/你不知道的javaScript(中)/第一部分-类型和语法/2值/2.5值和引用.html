@@ -7,7 +7,11 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 </head>
+简单值（即标量基本类型值，scalar primitive）总是通过值复制的方式来赋值 / 传递，包括
+null、undefined、字符串、数字、布尔和 ES6 中的 symbol。
 
+复合值（compound value）——对象（包括数组和封装对象，参见第 3 章）和函数，则总
+是通过引用复制的方式来赋值 / 传递。
 <body>
     <script>
         var a = 2;
